@@ -1,0 +1,23 @@
+import 'package:clinik_app/views/admin/home/adminHomePage.dart';
+import 'package:clinik_app/views/admin/statistics/statisticsPage.dart';
+import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+
+class AdminBaseController extends GetxController {
+  final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
+
+  var selectedIndex = 0.obs;
+
+  @override
+  void onInit() {
+    super.onInit();
+  }
+
+  void changePage(int index) {
+    selectedIndex.value = index;
+  }
+
+  List<Widget> buildScreens(context) {
+    return [AdminHomepage(scaffoldKey: scaffoldKey), StatisticsPage()];
+  }
+}
