@@ -10,9 +10,10 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 
-class LoginController extends GetxController {
+class AuthController extends GetxController {
   GlobalKey<FormState> formstate = GlobalKey<FormState>();
   LoginData loginData = LoginData(crud: Get.find<Crud>());
+  LogoutData logoutData = LogoutData(crud: Get.find<Crud>());
 
   Statusrequest statusrequest = Statusrequest.none;
   late TextEditingController email;
@@ -43,7 +44,7 @@ class LoginController extends GetxController {
           if (Get.isDialogOpen ?? false) Get.back();
           showCustomSnackbar(
             title: "خطأ",
-            message: "خطأ بكلمة المرور أو اسم المستخدم",
+            message: "فشل في السيرفر",
             icon: Icons.error,
             backgroundColor: Colors.redAccent,
           );
@@ -89,6 +90,51 @@ class LoginController extends GetxController {
 
   void showPassword() {
     isShowPassword = !isShowPassword;
+    update();
+  }
+
+  Future<void> logout() async {
+    statusrequest = Statusrequest.loading;
+    update();
+
+    showLoadingDialog('جاري تسجيل الخروج');
+
+    var response = await logoutData.getData();
+    update();
+    response.fold(
+      (failure) {
+        if (Get.isDialogOpen ?? false) Get.back();
+        showCustomSnackbar(
+          title: "خطأ",
+          message: "تعذر الاتصال بالسيرفر",
+          icon: Icons.error,
+          backgroundColor: Colors.redAccent,
+        );
+      },
+      (data) async {
+        if (data['status'] == true) {
+          await box.remove('token');
+          await box.remove('role');
+          await box.remove('userData');
+          Get.offAllNamed(AppRoutes.login);
+          showCustomSnackbar(
+            title: "إلى اللقاء",
+            message: data['messages'] ?? "تم تسجيل الخروج بنجاح ✅",
+            icon: Icons.logout_outlined,
+            backgroundColor: Appcolor.base,
+          );
+        } else {
+          if (Get.isDialogOpen ?? false) Get.back();
+          showCustomSnackbar(
+            title: "فشل",
+            message: data['messages'] ?? "بيانات غير صحيحة",
+            icon: Icons.error,
+            backgroundColor: Colors.redAccent,
+          );
+        }
+      },
+    );
+
     update();
   }
 }

@@ -34,7 +34,7 @@ class AdminBasePage extends StatelessWidget {
         PersistentBottomNavBarItem(
           contentPadding: 2,
 
-          icon: const Icon(Iconsax.calendar_1),
+          icon: const Icon(Iconsax.status_up),
           title: " الإحصائيات",
           textStyle: Theme.of(
             context,

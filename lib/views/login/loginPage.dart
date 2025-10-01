@@ -1,4 +1,4 @@
-import 'package:clinik_app/controllers/auth/loginController.dart';
+import 'package:clinik_app/controllers/auth/authController.dart';
 import 'package:clinik_app/core/constant/AppRoutes.dart';
 import 'package:clinik_app/views/login/widget/inputs.dart';
 import 'package:clinik_app/views/login/widget/logoimage.dart';
@@ -9,7 +9,7 @@ import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 
 class LoginPage extends StatelessWidget {
-  LoginController controller = Get.find();
+  AuthController controller = Get.find();
   LoginPage({super.key});
 
   @override

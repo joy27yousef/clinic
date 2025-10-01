@@ -1,4 +1,4 @@
-import 'package:clinik_app/controllers/auth/logoutController.dart';
+import 'package:clinik_app/controllers/auth/authController.dart';
 import 'package:clinik_app/core/constant/AppColor.dart';
 import 'package:clinik_app/core/constant/AppImages.dart';
 import 'package:clinik_app/core/function/confirmationAlert.dart';
@@ -8,7 +8,7 @@ import 'package:get/utils.dart';
 import 'package:iconsax/iconsax.dart';
 
 class OpenDrawer extends StatelessWidget {
-  LogoutController controller = Get.find();
+  AuthController controller = Get.find();
   OpenDrawer({super.key});
 
   @override
@@ -47,7 +47,7 @@ class OpenDrawer extends StatelessWidget {
         ListTile(
           onTap: () {
             confirmationAelrt(
-            Appimages.logout,
+              Appimages.logout,
               'هل أنت واثق من  أنك تريد تسجيل الخروج من التطبيق ؟؟',
               'كلا، البقاء',
               'نعم، سجّل الخروج',

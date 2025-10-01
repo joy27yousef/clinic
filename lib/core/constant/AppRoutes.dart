@@ -8,4 +8,5 @@ class AppRoutes {
   static const String doctorsStatistics = "/DoctorsStatistics";
   static const String patientStatistics = "/PatientStatistics";
   static const String inputSatistics = "/InputSatistics";
+  static const String appointmentsSatistics = "/AppointmentsSatistics";
 }

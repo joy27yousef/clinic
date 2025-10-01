@@ -1,8 +1,12 @@
+import 'package:clinik_app/controllers/doctor/calendarController.dart';
+import 'package:clinik_app/core/class/handilingDataView.dart';
 import 'package:clinik_app/core/constant/AppColor.dart';
 import 'package:clinik_app/core/function/getGreeting.dart';
+import 'package:clinik_app/views/doctor/calendar/widget/actionAppBar.dart';
 import 'package:clinik_app/views/doctor/home/widgets/dailyAppointments.dart';
 import 'package:clinik_app/views/doctor/home/widgets/welcomePart.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get_state_manager/src/simple/get_state.dart';
 import 'package:get_storage/get_storage.dart';
 
 class DoctorHomePage extends StatelessWidget {
@@ -29,16 +33,27 @@ class DoctorHomePage extends StatelessWidget {
           ),
         ),
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(20),
-        child: ListView(
-          children: [
-            WelcomePart(
-              containerColor: Appcolor.baselight,
-              textColor: Appcolor.bas2,
+      body: RefreshIndicator(
+        color: Appcolor.base,
+        onRefresh: () async {
+          await controller.getAppointmentsData();
+        },
+        child: Padding(
+          padding: const EdgeInsets.all(20),
+          child: GetBuilder<CalendarControllerX>(
+            builder: (controller) => Handilingdataview(
+              statusrequests: [controller.statusrequest],
+              widget: ListView(
+                children: [
+                  WelcomePart(
+                    containerColor: Appcolor.baselight,
+                    textColor: Appcolor.bas2,
+                  ),
+                  DailyAppointments(),
+                ],
+              ),
             ),
-            DailyAppointments(),
-          ],
+          ),
         ),
       ),
     );

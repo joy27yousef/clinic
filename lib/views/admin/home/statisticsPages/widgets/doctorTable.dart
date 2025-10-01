@@ -5,11 +5,10 @@ import 'package:get/get.dart';
 
 class DoctorTable extends StatelessWidget {
   DoctorTable({super.key});
-  DoctorsStatisticsController controller = Get.find();
+  final DoctorsStatisticsController controller = Get.find();
+
   @override
   Widget build(BuildContext context) {
-    final filtered = controller.filteredDoctors;
-
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -22,63 +21,69 @@ class DoctorTable extends StatelessWidget {
         ),
         const SizedBox(height: 10),
 
-        // أزرار الفلترة
-        Row(
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: List.generate(controller.filters.length, (i) {
-            final isSelected = controller.selectedFilter.value == i;
-            return GestureDetector(
-              onTap: () => controller.selectFilter(i),
-              child: Container(
-                margin: const EdgeInsets.all(6),
-                padding: const EdgeInsets.symmetric(
-                  horizontal: 16,
-                  vertical: 10,
-                ),
-                decoration: BoxDecoration(
-                  color: isSelected ? Appcolor.bas2 : Colors.grey.shade100,
-                  borderRadius: BorderRadius.circular(20),
-                ),
-                child: Text(
-                  controller.filters[i],
-                  style: Theme.of(context).textTheme.titleLarge!.copyWith(
-                    fontWeight: FontWeight.normal,
-                    fontSize: 17,
-                    color: isSelected ? Colors.white : Colors.grey.shade500,
+        // ✅ أزرار الفلترة داخل Obx
+        Obx(() {
+          return Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: List.generate(controller.filters.length, (i) {
+              final isSelected = controller.selectedFilter.value == i;
+              return GestureDetector(
+                onTap: () => controller.selectFilter(i),
+                child: Container(
+                  margin: const EdgeInsets.all(6),
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 16,
+                    vertical: 10,
+                  ),
+                  decoration: BoxDecoration(
+                    color: isSelected ? Appcolor.bas2 : Colors.grey.shade100,
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  child: Text(
+                    controller.filters[i],
+                    style: Theme.of(context).textTheme.titleLarge!.copyWith(
+                      fontWeight: FontWeight.normal,
+                      fontSize: 17,
+                      color: isSelected ? Colors.white : Colors.grey.shade500,
+                    ),
                   ),
                 ),
-              ),
-            );
-          }),
-        ),
+              );
+            }),
+          );
+        }),
 
         const SizedBox(height: 30),
 
-        // الجدول الديناميكي
-        if (filtered.isEmpty)
-          Center(
-            child: Text(
-              controller.selectedFilter.value == 1
-                  ? "لا يوجد أطباء متاحين"
-                  : controller.selectedFilter.value == 2
-                  ? "لا يوجد أطباء غير متاحين"
-                  : "لا يوجد أطباء",
-              style: Theme.of(context).textTheme.titleMedium,
-            ),
-          )
-        else
-          Table(
+        // ✅ الجدول كمان داخل Obx
+        Obx(() {
+          final filtered = controller.filteredDoctors;
+
+          if (filtered.isEmpty) {
+            return Center(
+              child: Text(
+                controller.selectedFilter.value == 1
+                    ? "لا يوجد أطباء متاحين"
+                    : controller.selectedFilter.value == 2
+                    ? "لا يوجد أطباء غير متاحين"
+                    : "لا يوجد أطباء",
+                style: Theme.of(context).textTheme.titleMedium,
+              ),
+            );
+          }
+
+          return Table(
             border: TableBorder.all(color: Appcolor.bas2),
             columnWidths: const {0: FlexColumnWidth(3), 1: FlexColumnWidth(2)},
             children: [
               // رأس الجدول
               TableRow(
-                decoration: BoxDecoration(color: Color(0xFFE6F0F7)),
+                decoration: const BoxDecoration(color: Color(0xFFE6F0F7)),
                 children: [
                   Padding(
-                    padding: EdgeInsets.all(8.0),
+                    padding: const EdgeInsets.all(8.0),
                     child: Text(
-                      "الاسم",
+                      "اسم الطبيب",
                       style: Theme.of(context).textTheme.titleLarge!.copyWith(
                         color: Appcolor.bas2,
                         fontSize: 17,
@@ -86,7 +91,7 @@ class DoctorTable extends StatelessWidget {
                     ),
                   ),
                   Padding(
-                    padding: EdgeInsets.all(8.0),
+                    padding: const EdgeInsets.all(8.0),
                     child: Text(
                       "التخصص",
                       style: Theme.of(context).textTheme.titleLarge!.copyWith(
@@ -97,7 +102,7 @@ class DoctorTable extends StatelessWidget {
                   ),
                 ],
               ),
-              // الصفوف الديناميكية
+              // الصفوف
               for (var doc in filtered)
                 TableRow(
                   children: [
@@ -217,32 +222,35 @@ class DoctorTable extends StatelessWidget {
                           ),
                         );
                       },
+                      borderRadius: BorderRadius.all(Radius.circular(20)),
+
                       child: Padding(
                         padding: const EdgeInsets.all(10),
                         child: Text(
                           doc["name"] ?? '',
                           style: Theme.of(context).textTheme.titleLarge!
                               .copyWith(
+                                fontSize: 16,
                                 fontWeight: FontWeight.normal,
-                                fontSize: 14,
                               ),
                         ),
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.all(8.0),
+                      padding: const EdgeInsets.all(10),
                       child: Text(
                         doc["specialization"] ?? '',
                         style: Theme.of(context).textTheme.titleLarge!.copyWith(
+                          fontSize: 16,
                           fontWeight: FontWeight.normal,
-                          fontSize: 14,
                         ),
                       ),
                     ),
                   ],
                 ),
             ],
-          ),
+          );
+        }),
       ],
     );
   }

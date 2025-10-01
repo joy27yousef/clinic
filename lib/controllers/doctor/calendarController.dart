@@ -36,7 +36,7 @@ class CalendarControllerX extends GetxController {
     //   doctorId: user['id'] ,
     // );
     var response = await appointmentsData.getData(
-      doctorId: '36c9848e-38cd-4f8d-a24a-25e3f5641cfa',
+      doctorId: '01999ebc-602b-70f9-bec5-7929e8d8bbc7',
     );
 
     update();
@@ -45,6 +45,7 @@ class CalendarControllerX extends GetxController {
       (failure) {
         statusrequest = Statusrequest.serverfailure;
         print('❌ error server');
+        update();
       },
       (data) async {
         if (data['status'] == true) {
@@ -61,6 +62,7 @@ class CalendarControllerX extends GetxController {
           statusrequest = Statusrequest.failure;
           print('⚠️ error in response');
         }
+        update();
       },
     );
 

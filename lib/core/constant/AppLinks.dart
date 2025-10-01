@@ -6,4 +6,7 @@ class Applinks {
   //doctor
   static const String appointments = '$server/appointments';
   static const String doctors = '$server/doctors';
+  static const String patients = '$server/patients';
+  static const String records = '$server/medical-records-stats';
+  static const String appointmentsStats = '$server/appointments-stats';
 }

@@ -78,4 +78,6 @@ class DoctorsStatisticsController extends GetxController {
   void selectFilter(int index) {
     selectedFilter.value = index;
   }
+
+  static find() {}
 }

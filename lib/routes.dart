@@ -1,4 +1,5 @@
 import 'package:clinik_app/core/constant/AppRoutes.dart';
+import 'package:clinik_app/views/admin/home/statisticsPages/appointmentsSatistics.dart';
 import 'package:clinik_app/views/admin/home/statisticsPages/patientStatistics.dart';
 import 'package:clinik_app/core/middleware/AppMiddleware.dart';
 import 'package:clinik_app/views/admin/adminBasePage.dart';
@@ -20,4 +21,8 @@ List<GetPage<dynamic>>? routes = [
   GetPage(name: AppRoutes.doctorsStatistics, page: () => DoctorsStatistics()),
   GetPage(name: AppRoutes.patientStatistics, page: () => PatientStatistics()),
   GetPage(name: AppRoutes.inputSatistics, page: () => InputSatistics()),
+  GetPage(
+    name: AppRoutes.appointmentsSatistics,
+    page: () => AppointmentsSatistics(),
+  ),
 ];

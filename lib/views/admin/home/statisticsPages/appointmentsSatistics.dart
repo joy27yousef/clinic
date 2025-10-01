@@ -1,20 +1,22 @@
+import 'package:clinik_app/controllers/admin/appointmentsSatisticsController.dart';
 import 'package:clinik_app/controllers/admin/doctorsStatisticsController.dart';
 import 'package:clinik_app/core/class/handilingDataView.dart';
 import 'package:clinik_app/core/constant/AppColor.dart';
-import 'package:clinik_app/views/admin/home/statisticsPages/widgets/doctorTable.dart';
-import 'package:clinik_app/views/admin/home/statisticsPages/widgets/statisticsDoctorCard.dart';
+import 'package:clinik_app/views/admin/home/statisticsPages/widgets/appointmentStatisticsCard.dart';
+import 'package:clinik_app/views/admin/home/statisticsPages/widgets/appointmentTable.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class DoctorsStatistics extends StatelessWidget {
-  DoctorsStatistics({super.key});
-  final DoctorsStatisticsController controller = Get.find();
+class AppointmentsSatistics extends StatelessWidget {
+  AppointmentsSatistics({super.key});
+  AppointmentsSatisticsController controller = Get.find();
+  DoctorsStatisticsController doctorcontroller = Get.find();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('الأطباء في النظام'),
+        title: const Text('المواعيد في النظام'),
         leadingWidth: 40,
         titleSpacing: 0,
         leading: InkWell(
@@ -26,16 +28,16 @@ class DoctorsStatistics extends StatelessWidget {
       body: RefreshIndicator(
         color: Appcolor.bas2,
         onRefresh: () async {
-          await controller.getDoctorsData();
+          await controller.getAppointmentsStatsData();
         },
-        child: GetBuilder<DoctorsStatisticsController>(
+        child: GetBuilder<AppointmentsSatisticsController>(
           builder: (controller) {
             return Handilingdataview(
               statusrequests: [controller.statusrequest],
               widget: Padding(
-                padding: const EdgeInsets.all(20),
+                padding: const EdgeInsets.all(18),
                 child: ListView(
-                  children: [StatisticsDoctorCard(), DoctorTable()],
+                  children: [AppointmentStatisticsCard(), AppointmentTable()],
                 ),
               ),
             );

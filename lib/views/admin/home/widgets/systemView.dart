@@ -17,7 +17,7 @@ class SystemView extends StatelessWidget {
     () => Get.toNamed(AppRoutes.doctorsStatistics),
     () => Get.toNamed(AppRoutes.patientStatistics),
     () => Get.toNamed(AppRoutes.inputSatistics),
-    () => Get.toNamed(AppRoutes.inputSatistics),
+    () => Get.toNamed(AppRoutes.appointmentsSatistics),
   ];
 
   @override

@@ -2,7 +2,7 @@ import 'package:clinik_app/core/class/statusRequest.dart';
 import 'package:clinik_app/core/constant/AppColor.dart';
 import 'package:clinik_app/core/constant/AppImages.dart';
 import 'package:flutter/material.dart';
-import 'package:lottie/lottie.dart';
+import 'package:skeletonizer/skeletonizer.dart';
 
 class Handilingdataview extends StatelessWidget {
   final List<Statusrequest> statusrequests;
@@ -35,13 +35,29 @@ class Handilingdataview extends StatelessWidget {
 
     switch (currentStatus) {
       case Statusrequest.loading:
-        return Center(child: Lottie.asset(Appimages.logo));
+        return Skeletonizer(enabled: true, child: widget);
+
       case Statusrequest.offlinefailure:
-        return Center(child: Lottie.asset(Appimages.offline));
+        return Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Image.asset(Appimages.offline, width: 120),
+              const SizedBox(height: 16),
+              Text(
+                "أنت غير متصل بالإنترنت",
+                style: Theme.of(context).textTheme.titleMedium,
+              ),
+            ],
+          ),
+        );
+
       case Statusrequest.serverfailure:
-        return Center(child: const Text('Server failure'));
+        return const Center(child: Text('Server failure ❌'));
+
       case Statusrequest.serverException:
-        return Center(child: const Text('Unexpected error'));
+        return const Center(child: Text('Unexpected error ⚠️'));
+
       case Statusrequest.failure:
         return Center(
           child: Container(
@@ -64,8 +80,10 @@ class Handilingdataview extends StatelessWidget {
             ),
           ),
         );
+
       case Statusrequest.paymentRequired:
-        return Center(child: Text("Payment Required ❌"));
+        return const Center(child: Text("Payment Required ❌"));
+
       default:
         return widget;
     }

@@ -1,4 +1,4 @@
-import 'package:clinik_app/controllers/auth/loginController.dart';
+import 'package:clinik_app/controllers/auth/authController.dart';
 import 'package:clinik_app/core/constant/AppColor.dart';
 import 'package:clinik_app/core/function/validinput.dart';
 import 'package:clinik_app/views/widgets/TextFormGen.dart';
@@ -9,7 +9,7 @@ import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_state_manager/src/simple/get_state.dart';
 
 class Inputs extends StatelessWidget {
-  LoginController controller = Get.find();
+  AuthController controller = Get.find();
   Inputs({super.key});
 
   @override
@@ -46,7 +46,7 @@ class Inputs extends StatelessWidget {
             ),
           ),
           SizedBox(height: 10),
-          GetBuilder<LoginController>(
+          GetBuilder<AuthController>(
             builder: (controller) => TextFormGen(
               valid: (val) {
                 return validInput(val!, 8, 100, 'password');
