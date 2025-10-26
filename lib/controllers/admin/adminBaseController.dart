@@ -1,5 +1,5 @@
-import 'package:clinik_app/views/admin/home/adminHomePage.dart';
-import 'package:clinik_app/views/admin/statistics/statisticsPage.dart';
+import 'package:clinik_app/views/screens/admin/home/adminHomePage.dart';
+import 'package:clinik_app/views/screens/admin/statistics/statisticsPage.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

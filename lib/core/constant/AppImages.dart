@@ -6,4 +6,5 @@ class Appimages {
   static String loading = 'assets/images/loading.json';
   static String personal = 'assets/images/personalInfo.png';
   static String logout = 'assets/images/logout.png';
+  static String team = 'assets/images/team.png';
 }

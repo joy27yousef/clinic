@@ -8,7 +8,7 @@ String? validInput(
   String? compareWith,
 }) {
   if (val.isEmpty) {
-    return "الحقل فارغ";
+    return "لا يجب أن يكون الحقل فارغ";
   }
 
 if (val.length < min) {

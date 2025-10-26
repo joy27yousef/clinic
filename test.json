@@ -1,0 +1,1770 @@
+{
+    "status": true,
+    "data": [
+        {
+            "category_id": 183,
+            "title": "Fashion",
+            "logo": "/storage/categories/Pagthloxiv2SIae3bPVFdnTeYaQKWl8LVWku49T7.png",
+            "view_status": 1,
+            "level": 0,
+            "childs": []
+        },
+        {
+            "category_id": 182,
+            "title": "Home Decor",
+            "logo": "/storage/categories/95zxkuVtm9wqswlonpHoka3TGKdZQH3KVisPfyq8.png",
+            "view_status": 1,
+            "level": 0,
+            "childs": []
+        },
+        {
+            "category_id": 181,
+            "title": "personal",
+            "logo": "/storage/categories/9yasJ7UlZy43lfZCZErlMxflC11eMbuG1BCRd9tB.png",
+            "view_status": 1,
+            "level": 0,
+            "childs": []
+        },
+        {
+            "category_id": 180,
+            "title": "Gadgets",
+            "logo": "/storage/categories/cRAXSXK1a13FatMZ0n1Sim1XPJLrN99RYgjxvhbl.png",
+            "view_status": 1,
+            "level": 0,
+            "childs": []
+        },
+        {
+            "category_id": 179,
+            "title": "Sports",
+            "logo": "/storage/categories/JebObq8U28bg0i3lpB56mq933YakKYkcyCbstwqR.png",
+            "view_status": 1,
+            "level": 0,
+            "childs": []
+        },
+        {
+            "category_id": 120,
+            "title": "Automotive",
+            "logo": "/storage/categories/z64nRF8iaQatigxmH3zfEaXCzLOtmh2BHLkSyk7N.jpg",
+            "view_status": 1,
+            "level": 0,
+            "childs": [
+                {
+                    "id": 241,
+                    "category_id": 121,
+                    "parent_id": 120,
+                    "title": "Car Accessories",
+                    "logo": "/storage/categories/1vaCZRLEjzNHplucGjU2RZWSNHdAjRjkVLJgVyS5.jpg",
+                    "view_status": 1,
+                    "level": 1,
+                    "is_bundle": 1,
+                    "is_custom": 1,
+                    "childs": [
+                        {
+                            "id": 243,
+                            "category_id": 122,
+                            "parent_id": 121,
+                            "title": "Seat Covers",
+                            "logo": "/storage/categories/mFHTx56AnbPKpEOBLhw6bB3QpWieW97Hixm8Sr5V.jpg",
+                            "view_status": 1,
+                            "level": 2,
+                            "is_bundle": 1,
+                            "is_custom": 1,
+                            "childs": []
+                        },
+                        {
+                            "id": 245,
+                            "category_id": 123,
+                            "parent_id": 121,
+                            "title": "Floor Mats",
+                            "logo": "/storage/categories/IDCCheEwLEWGtgmyLVRaJ7VRcFFsntYovPeFKSBt.png",
+                            "view_status": 1,
+                            "level": 2,
+                            "is_bundle": 1,
+                            "is_custom": 1,
+                            "childs": []
+                        },
+                        {
+                            "id": 247,
+                            "category_id": 124,
+                            "parent_id": 121,
+                            "title": "Air Fresheners",
+                            "logo": "/storage/categories/RizJlaib97BmXlKDqwgP1Gx7c41e9auHIK6MLB0a.jpg",
+                            "view_status": 1,
+                            "level": 2,
+                            "is_bundle": 1,
+                            "is_custom": 1,
+                            "childs": []
+                        },
+                        {
+                            "id": 274,
+                            "category_id": 137,
+                            "parent_id": 121,
+                            "title": "test",
+                            "logo": "/storage/categories/5LRmz6LNya7Wr7MaKhsohpSrS3WXUYjX8ezswYrD.png",
+                            "view_status": 1,
+                            "level": 2,
+                            "is_bundle": 1,
+                            "is_custom": 1,
+                            "childs": []
+                        }
+                    ]
+                },
+                {
+                    "id": 249,
+                    "category_id": 125,
+                    "parent_id": 120,
+                    "title": "Bike Accessories",
+                    "logo": "/storage/categories/WBgjLmgCwCu279expJQjc3CnfYpOFzCEKjybdKVd.jpg",
+                    "view_status": 1,
+                    "level": 1,
+                    "is_bundle": 1,
+                    "is_custom": 1,
+                    "childs": [
+                        {
+                            "id": 251,
+                            "category_id": 126,
+                            "parent_id": 125,
+                            "title": "Helmets",
+                            "logo": "/storage/categories/xvWBhAiSfbu4UgKjaLRigvIsjLt1w1aG9zQJxQfM.jpg",
+                            "view_status": 1,
+                            "level": 2,
+                            "is_bundle": 1,
+                            "is_custom": 1,
+                            "childs": []
+                        },
+                        {
+                            "id": 253,
+                            "category_id": 127,
+                            "parent_id": 125,
+                            "title": "Bike Covers",
+                            "logo": "/storage/categories/yJAe83x6QcZ9aFgeahpJUGvpQV4me8mFoAyEh4rE.jpg",
+                            "view_status": 1,
+                            "level": 2,
+                            "is_bundle": 1,
+                            "is_custom": 1,
+                            "childs": []
+                        },
+                        {
+                            "id": 255,
+                            "category_id": 128,
+                            "parent_id": 125,
+                            "title": "Gloves",
+                            "logo": "/storage/categories/aC4rRwE5SrjpBy5zHipkAKnH7VQRpYFGnzBwak9h.jpg",
+                            "view_status": 1,
+                            "level": 2,
+                            "is_bundle": 1,
+                            "is_custom": 1,
+                            "childs": []
+                        }
+                    ]
+                },
+                {
+                    "id": 257,
+                    "category_id": 129,
+                    "parent_id": 120,
+                    "title": "Maintenance",
+                    "logo": "/storage/categories/03eCews9U0fp4BDPv9otqeCOqfQD5q3UoJMw9q5O.jpg",
+                    "view_status": 1,
+                    "level": 1,
+                    "is_bundle": 1,
+                    "is_custom": 1,
+                    "childs": [
+                        {
+                            "id": 259,
+                            "category_id": 130,
+                            "parent_id": 129,
+                            "title": "Oils & Fluids",
+                            "logo": "/storage/categories/OeAP2aIS4MrNxQFIuvP4s0iHpCDOnWP2duuKGkeK.png",
+                            "view_status": 1,
+                            "level": 2,
+                            "is_bundle": 1,
+                            "is_custom": 1,
+                            "childs": []
+                        },
+                        {
+                            "id": 261,
+                            "category_id": 131,
+                            "parent_id": 129,
+                            "title": "Cleaning Tools",
+                            "logo": "/storage/categories/Nu7ZJv0PvwB5ssTkWl3Vunit4Tgfc2PjO7p6iOMj.jpg",
+                            "view_status": 1,
+                            "level": 2,
+                            "is_bundle": 1,
+                            "is_custom": 1,
+                            "childs": []
+                        },
+                        {
+                            "id": 263,
+                            "category_id": 132,
+                            "parent_id": 129,
+                            "title": "Spare Parts",
+                            "logo": "/storage/categories/cNTEzsO8P7opVUYVv6MjbWmMaKfdaxIo3oIoqwVO.jpg",
+                            "view_status": 1,
+                            "level": 2,
+                            "is_bundle": 1,
+                            "is_custom": 1,
+                            "childs": []
+                        }
+                    ]
+                },
+                {
+                    "id": 265,
+                    "category_id": 133,
+                    "parent_id": 120,
+                    "title": "Electronics",
+                    "logo": "/storage/categories/Up90UVnT6oFWDGgufjGW1d8pMFi3eEQXOyBR8mBY.jpg",
+                    "view_status": 1,
+                    "level": 1,
+                    "is_bundle": 1,
+                    "is_custom": 1,
+                    "childs": [
+                        {
+                            "id": 267,
+                            "category_id": 134,
+                            "parent_id": 133,
+                            "title": "GPS Devices",
+                            "logo": "/storage/categories/3yScdzriXgF3oCsHPZialOunHtsjmOkdTTaviqDs.jpg",
+                            "view_status": 1,
+                            "level": 2,
+                            "is_bundle": 1,
+                            "is_custom": 1,
+                            "childs": []
+                        },
+                        {
+                            "id": 269,
+                            "category_id": 135,
+                            "parent_id": 133,
+                            "title": "Dash Cams",
+                            "logo": "/storage/categories/CtoiFQGEFKbBAimHVaK9L30Bs17M3kqkclwED47I.jpg",
+                            "view_status": 1,
+                            "level": 2,
+                            "is_bundle": 1,
+                            "is_custom": 1,
+                            "childs": []
+                        },
+                        {
+                            "id": 271,
+                            "category_id": 136,
+                            "parent_id": 133,
+                            "title": "Stereo Systems",
+                            "logo": "/storage/categories/WPAfKVRtOslTcUTkyQReL8G24kUnxAjR7XmxPs2m.jpg",
+                            "view_status": 1,
+                            "level": 2,
+                            "is_bundle": 1,
+                            "is_custom": 1,
+                            "childs": []
+                        }
+                    ]
+                },
+                {
+                    "id": 314,
+                    "category_id": 160,
+                    "parent_id": 120,
+                    "title": "Planes",
+                    "logo": "/storage/categories/TjMlEf2pNq5uJL31mO2tk4IcJsuyjJxopIsnvtmF.jpg",
+                    "view_status": 1,
+                    "level": 1,
+                    "is_bundle": 1,
+                    "is_custom": 0,
+                    "childs": []
+                }
+            ]
+        },
+        {
+            "category_id": 103,
+            "title": "Books & Media",
+            "logo": "/storage/categories/FqRdtKWxtdAj5mvLEo7speG8LFXctQ9vuuLacDbT.jpg",
+            "view_status": 1,
+            "level": 0,
+            "childs": [
+                {
+                    "id": 207,
+                    "category_id": 104,
+                    "parent_id": 103,
+                    "title": "Fiction",
+                    "logo": "/storage/categories/BxUVjYHHl98Jc9lwsKLLq1t121xhT9mJQZalfiMe.jpg",
+                    "view_status": 1,
+                    "level": 1,
+                    "is_bundle": 1,
+                    "is_custom": 1,
+                    "childs": [
+                        {
+                            "id": 209,
+                            "category_id": 105,
+                            "parent_id": 104,
+                            "title": "Romance",
+                            "logo": "/storage/categories/7aRRgd9LTcvCfCRZ1RHHBPkGmkmFl6hLAYH99U5q.jpg",
+                            "view_status": 1,
+                            "level": 2,
+                            "is_bundle": 1,
+                            "is_custom": 1,
+                            "childs": []
+                        },
+                        {
+                            "id": 211,
+                            "category_id": 106,
+                            "parent_id": 104,
+                            "title": "Sci-Fi",
+                            "logo": "/storage/categories/HBkCXZy2H2ueeIU5KSilhQX8i6lCWXdarAxb14P9.jpg",
+                            "view_status": 1,
+                            "level": 2,
+                            "is_bundle": 1,
+                            "is_custom": 1,
+                            "childs": []
+                        },
+                        {
+                            "id": 213,
+                            "category_id": 107,
+                            "parent_id": 104,
+                            "title": "Mystery",
+                            "logo": "/storage/categories/nJ61yjx8n0T4AlOA1D2zggMnzgK896zDQWt2UQ5o.jpg",
+                            "view_status": 1,
+                            "level": 2,
+                            "is_bundle": 1,
+                            "is_custom": 1,
+                            "childs": []
+                        }
+                    ]
+                },
+                {
+                    "id": 215,
+                    "category_id": 108,
+                    "parent_id": 103,
+                    "title": "Non-Fiction",
+                    "logo": "/storage/categories/iioUJeDz90u9VCNQUfaDPtnq48U8fzuEkTJxrfac.jpg",
+                    "view_status": 1,
+                    "level": 1,
+                    "is_bundle": 1,
+                    "is_custom": 1,
+                    "childs": [
+                        {
+                            "id": 217,
+                            "category_id": 109,
+                            "parent_id": 108,
+                            "title": "Self-Help",
+                            "logo": "/storage/categories/XDEIfYlYyIBJ0S6osmr9nWP1eKULdh8hDByMzT1U.jpg",
+                            "view_status": 1,
+                            "level": 2,
+                            "is_bundle": 1,
+                            "is_custom": 1,
+                            "childs": []
+                        },
+                        {
+                            "id": 219,
+                            "category_id": 110,
+                            "parent_id": 108,
+                            "title": "Biographies",
+                            "logo": "/storage/categories/VPptlN5GtKH0P8KLiiSzMsI2kfTSVHSoqSsxdoS8.jpg",
+                            "view_status": 1,
+                            "level": 2,
+                            "is_bundle": 1,
+                            "is_custom": 1,
+                            "childs": []
+                        },
+                        {
+                            "id": 221,
+                            "category_id": 111,
+                            "parent_id": 108,
+                            "title": "Business",
+                            "logo": "/storage/categories/fUG8fMv8u4aqUSvAuQF8P8VPAqZC7fp9GY3ZONBw.jpg",
+                            "view_status": 1,
+                            "level": 2,
+                            "is_bundle": 1,
+                            "is_custom": 1,
+                            "childs": []
+                        }
+                    ]
+                },
+                {
+                    "id": 223,
+                    "category_id": 112,
+                    "parent_id": 103,
+                    "title": "Kids' Books",
+                    "logo": "/storage/categories/syTe96mSomdBuC0JFO76lGNhyAJ96s7m2vGFhyWD.jpg",
+                    "view_status": 1,
+                    "level": 1,
+                    "is_bundle": 1,
+                    "is_custom": 1,
+                    "childs": [
+                        {
+                            "id": 225,
+                            "category_id": 113,
+                            "parent_id": 112,
+                            "title": "Picture Books",
+                            "logo": "/storage/categories/qKhQ9VLNQbKP0ROwMD7luZKiaLyfEBoIg0YNzmMg.jpg",
+                            "view_status": 1,
+                            "level": 2,
+                            "is_bundle": 1,
+                            "is_custom": 1,
+                            "childs": []
+                        },
+                        {
+                            "id": 227,
+                            "category_id": 114,
+                            "parent_id": 112,
+                            "title": "Educational",
+                            "logo": "/storage/categories/NPcE7icWOhHryV6o2Ijxlv9puEacBQxnKYpG25aq.jpg",
+                            "view_status": 1,
+                            "level": 2,
+                            "is_bundle": 1,
+                            "is_custom": 1,
+                            "childs": []
+                        },
+                        {
+                            "id": 229,
+                            "category_id": 115,
+                            "parent_id": 112,
+                            "title": "Comics",
+                            "logo": "/storage/categories/FtS23axmeI2av6rKt2ISAd13ApUURrvT2owkP4LR.jpg",
+                            "view_status": 1,
+                            "level": 2,
+                            "is_bundle": 1,
+                            "is_custom": 1,
+                            "childs": []
+                        }
+                    ]
+                },
+                {
+                    "id": 231,
+                    "category_id": 116,
+                    "parent_id": 103,
+                    "title": "Digital Media",
+                    "logo": "/storage/categories/McybgtvjkgUFgx4gJ4yHIOPsoCsVG3zEgtWG9PpG.jpg",
+                    "view_status": 1,
+                    "level": 1,
+                    "is_bundle": 1,
+                    "is_custom": 1,
+                    "childs": [
+                        {
+                            "id": 233,
+                            "category_id": 117,
+                            "parent_id": 116,
+                            "title": "E-Books",
+                            "logo": "/storage/categories/hY4b8cQUdo4md4CkxXp9H7LQE0LZzmc6yCluOuNz.jpg",
+                            "view_status": 1,
+                            "level": 2,
+                            "is_bundle": 1,
+                            "is_custom": 1,
+                            "childs": []
+                        },
+                        {
+                            "id": 235,
+                            "category_id": 118,
+                            "parent_id": 116,
+                            "title": "Audiobooks",
+                            "logo": "/storage/categories/8sMm24pQIQ1S94aIdi7fvvRjKNlqNEfV6LbRmmdh.jpg",
+                            "view_status": 1,
+                            "level": 2,
+                            "is_bundle": 1,
+                            "is_custom": 1,
+                            "childs": []
+                        },
+                        {
+                            "id": 237,
+                            "category_id": 119,
+                            "parent_id": 116,
+                            "title": "Magazines",
+                            "logo": "/storage/categories/x6owtI9dROZItUCSy2wbKkdbcaTFC2ze1cMTxhj5.jpg",
+                            "view_status": 1,
+                            "level": 2,
+                            "is_bundle": 1,
+                            "is_custom": 1,
+                            "childs": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "category_id": 84,
+            "title": "Toys & Games",
+            "logo": "/storage/categories/jR5m9zWGLOWFpMUsL6VfeXn58P2eET9cYK8IPqLt.jpg",
+            "view_status": 1,
+            "level": 0,
+            "childs": [
+                {
+                    "id": 169,
+                    "category_id": 85,
+                    "parent_id": 84,
+                    "title": "Action Figures",
+                    "logo": "/storage/categories/bBnmk5mxGI30RAfvtANvruHBUDI0oSkd1ABoCukB.jpg",
+                    "view_status": 1,
+                    "level": 1,
+                    "is_bundle": 1,
+                    "is_custom": 1,
+                    "childs": [
+                        {
+                            "id": 171,
+                            "category_id": 86,
+                            "parent_id": 85,
+                            "title": "Superheroes",
+                            "logo": "/storage/categories/aCpYKdQdknLuzFGtLCh6fQx1pogUpO8xnOLBc1Oa.jpg",
+                            "view_status": 1,
+                            "level": 2,
+                            "is_bundle": 1,
+                            "is_custom": 1,
+                            "childs": []
+                        },
+                        {
+                            "id": 173,
+                            "category_id": 87,
+                            "parent_id": 85,
+                            "title": "Anime Characters",
+                            "logo": "/storage/categories/14ozZRBBY6oSbdxz6ckLP0wS9c7CEXQ5A6pNbWQj.jpg",
+                            "view_status": 1,
+                            "level": 2,
+                            "is_bundle": 1,
+                            "is_custom": 1,
+                            "childs": []
+                        },
+                        {
+                            "id": 175,
+                            "category_id": 88,
+                            "parent_id": 85,
+                            "title": "Movie Figures",
+                            "logo": "/storage/categories/zamlfwAFXJECpSXUEYDzk2POTstMOTXPKvBKKpoC.jpg",
+                            "view_status": 1,
+                            "level": 2,
+                            "is_bundle": 1,
+                            "is_custom": 1,
+                            "childs": []
+                        }
+                    ]
+                },
+                {
+                    "id": 177,
+                    "category_id": 89,
+                    "parent_id": 84,
+                    "title": "Board Games",
+                    "logo": "/storage/categories/sApxxLUS6oZlYKoyD5AwxUAHuzHMC3pSVcVqXbbw.jpg",
+                    "view_status": 1,
+                    "level": 1,
+                    "is_bundle": 1,
+                    "is_custom": 1,
+                    "childs": [
+                        {
+                            "id": 181,
+                            "category_id": 91,
+                            "parent_id": 89,
+                            "title": "Chess",
+                            "logo": "/storage/categories/109lehky5G8Tm4qZPDT8r0aoAv2gIFQUwNF5sSrB.jpg",
+                            "view_status": 1,
+                            "level": 2,
+                            "is_bundle": 1,
+                            "is_custom": 1,
+                            "childs": []
+                        },
+                        {
+                            "id": 183,
+                            "category_id": 92,
+                            "parent_id": 89,
+                            "title": "Monopoly",
+                            "logo": "/storage/categories/ZJdy0sstnSDJHByWYMrzC31pDlB0av9JkwmFcelf.jpg",
+                            "view_status": 1,
+                            "level": 2,
+                            "is_bundle": 1,
+                            "is_custom": 1,
+                            "childs": []
+                        },
+                        {
+                            "id": 185,
+                            "category_id": 93,
+                            "parent_id": 89,
+                            "title": "Scrabble",
+                            "logo": "/storage/categories/0nTZFMuxhdHMT1TE4FhAfrsumrv3odUwRex36hgx.jpg",
+                            "view_status": 1,
+                            "level": 2,
+                            "is_bundle": 1,
+                            "is_custom": 1,
+                            "childs": []
+                        }
+                    ]
+                },
+                {
+                    "id": 187,
+                    "category_id": 94,
+                    "parent_id": 84,
+                    "title": "Outdoor Toys",
+                    "logo": "/storage/categories/hwi75u7MQD4wfAn3iesLbaqQXudpEdnOBolbowpK.jpg",
+                    "view_status": 1,
+                    "level": 1,
+                    "is_bundle": 1,
+                    "is_custom": 1,
+                    "childs": [
+                        {
+                            "id": 189,
+                            "category_id": 95,
+                            "parent_id": 94,
+                            "title": "Kites",
+                            "logo": "/storage/categories/LkVolyLdCmt2S1IVRFsajl5vEL0F9iZg2ZJfqRyx.jpg",
+                            "view_status": 1,
+                            "level": 2,
+                            "is_bundle": 1,
+                            "is_custom": 1,
+                            "childs": []
+                        },
+                        {
+                            "id": 191,
+                            "category_id": 96,
+                            "parent_id": 94,
+                            "title": "Water Guns",
+                            "logo": "/storage/categories/z4OpD6SaXLMJjw6lo7stAA60SRGFQlWLtIMcfIFW.jpg",
+                            "view_status": 1,
+                            "level": 2,
+                            "is_bundle": 1,
+                            "is_custom": 1,
+                            "childs": []
+                        },
+                        {
+                            "id": 193,
+                            "category_id": 97,
+                            "parent_id": 94,
+                            "title": "Sports Toys",
+                            "logo": "/storage/categories/s73ODVlgZBZ1gEsMnnE5XX8ICr0neoIIVylMCyMD.jpg",
+                            "view_status": 1,
+                            "level": 2,
+                            "is_bundle": 1,
+                            "is_custom": 1,
+                            "childs": []
+                        },
+                        {
+                            "id": 195,
+                            "category_id": 98,
+                            "parent_id": 94,
+                            "title": "Educational Toys",
+                            "logo": "/storage/categories/yAjPXowkvdxpDj4vykCP8RuHa50K1LlQaJAh0Yys.jpg",
+                            "view_status": 1,
+                            "level": 2,
+                            "is_bundle": 1,
+                            "is_custom": 1,
+                            "childs": []
+                        }
+                    ]
+                },
+                {
+                    "id": 197,
+                    "category_id": 99,
+                    "parent_id": 84,
+                    "title": "Educational Toys",
+                    "logo": "/storage/categories/qx3SgpL3A8aJXhARmBtHkeCNJIgAEcpUZh47clCZ.jpg",
+                    "view_status": 1,
+                    "level": 1,
+                    "is_bundle": 1,
+                    "is_custom": 1,
+                    "childs": [
+                        {
+                            "id": 199,
+                            "category_id": 100,
+                            "parent_id": 99,
+                            "title": "Puzzles",
+                            "logo": "/storage/categories/DKbxxZe45MeO4FpMgaAXcjXLXub1GnRvuC1l7Tjn.jpg",
+                            "view_status": 1,
+                            "level": 2,
+                            "is_bundle": 1,
+                            "is_custom": 1,
+                            "childs": []
+                        },
+                        {
+                            "id": 201,
+                            "category_id": 101,
+                            "parent_id": 99,
+                            "title": "STEM Kits",
+                            "logo": "/storage/categories/GqlDTqpW8QhzH0qEmfdngu6YFFHPcnNgvIVxHnI6.jpg",
+                            "view_status": 1,
+                            "level": 2,
+                            "is_bundle": 1,
+                            "is_custom": 1,
+                            "childs": []
+                        },
+                        {
+                            "id": 203,
+                            "category_id": 102,
+                            "parent_id": 99,
+                            "title": "Flashcards",
+                            "logo": "/storage/categories/WqfjvGubdiFG8zcFcvzPB8TahdrZCZrr4aByZ6rn.jpg",
+                            "view_status": 1,
+                            "level": 2,
+                            "is_bundle": 1,
+                            "is_custom": 1,
+                            "childs": []
+                        }
+                    ]
+                },
+                {
+                    "id": 292,
+                    "category_id": 146,
+                    "parent_id": 84,
+                    "title": "test",
+                    "logo": "categories/def.jpg",
+                    "view_status": 1,
+                    "level": 1,
+                    "is_bundle": 1,
+                    "is_custom": 1,
+                    "childs": []
+                },
+                {
+                    "id": 350,
+                    "category_id": 185,
+                    "parent_id": 84,
+                    "title": "discount",
+                    "logo": "/storage/categories/fYnr6fFRJtUCcag8OOcXCltR7GS14IYLvVtK6jzc.png",
+                    "view_status": 1,
+                    "level": 1,
+                    "is_bundle": 1,
+                    "is_custom": 0,
+                    "childs": []
+                }
+            ]
+        },
+        {
+            "category_id": 67,
+            "title": "Sports & Outdoors",
+            "logo": "/storage/categories/0Ww52TuJqxiGdcXNPiXj12YJ0aOBXDbVzkoAm259.jpg",
+            "view_status": 1,
+            "level": 0,
+            "childs": [
+                {
+                    "id": 135,
+                    "category_id": 68,
+                    "parent_id": 67,
+                    "title": "Sports Equipment",
+                    "logo": "/storage/categories/wVW51IuMWrrKWKSJe7qov923csRhRPTVWkZKnNf6.jpg",
+                    "view_status": 1,
+                    "level": 1,
+                    "is_bundle": 1,
+                    "is_custom": 1,
+                    "childs": [
+                        {
+                            "id": 137,
+                            "category_id": 69,
+                            "parent_id": 68,
+                            "title": "Football",
+                            "logo": "/storage/categories/7arrWkhuyfoIb3zqXec85RfnruPraR1CCyoggA38.jpg",
+                            "view_status": 1,
+                            "level": 2,
+                            "is_bundle": 1,
+                            "is_custom": 1,
+                            "childs": []
+                        },
+                        {
+                            "id": 139,
+                            "category_id": 70,
+                            "parent_id": 68,
+                            "title": "Basketball",
+                            "logo": "/storage/categories/NHTJo4Yu3xgCViKUwvoVSoYBzVZ7OaoOdqWXqY3B.jpg",
+                            "view_status": 1,
+                            "level": 2,
+                            "is_bundle": 1,
+                            "is_custom": 1,
+                            "childs": []
+                        },
+                        {
+                            "id": 141,
+                            "category_id": 71,
+                            "parent_id": 68,
+                            "title": "Tennis",
+                            "logo": "/storage/categories/eBovWLHX7IC0fg6rfUjUHVT6SI7JI0MxMg0RXGF0.jpg",
+                            "view_status": 1,
+                            "level": 2,
+                            "is_bundle": 1,
+                            "is_custom": 1,
+                            "childs": []
+                        },
+                        {
+                            "id": 143,
+                            "category_id": 72,
+                            "parent_id": 68,
+                            "title": "Outdoor Gear",
+                            "logo": "/storage/categories/SxQbhwfUY6bEf6VwnN4mhD2Jwp0ugVHzI4Y2CXdW.jpg",
+                            "view_status": 1,
+                            "level": 2,
+                            "is_bundle": 1,
+                            "is_custom": 1,
+                            "childs": []
+                        },
+                        {
+                            "id": 145,
+                            "category_id": 73,
+                            "parent_id": 68,
+                            "title": "Tents",
+                            "logo": "/storage/categories/IQkQW1GshYyEwGMFhEX0y8y2AMMHAghlHSGZTl6G.jpg",
+                            "view_status": 1,
+                            "level": 2,
+                            "is_bundle": 1,
+                            "is_custom": 1,
+                            "childs": []
+                        },
+                        {
+                            "id": 147,
+                            "category_id": 74,
+                            "parent_id": 68,
+                            "title": "Backpacks",
+                            "logo": "/storage/categories/mOlmqFI4kYsSBtZgRHkgXPlQh9kwb0ZdLb6Xlvwc.jpg",
+                            "view_status": 1,
+                            "level": 2,
+                            "is_bundle": 1,
+                            "is_custom": 1,
+                            "childs": []
+                        },
+                        {
+                            "id": 149,
+                            "category_id": 75,
+                            "parent_id": 68,
+                            "title": "Sleeping Bags",
+                            "logo": "/storage/categories/4aWK6yNmU8tNNG0G5AQGCu6DuFawZas030aaw59i.jpg",
+                            "view_status": 1,
+                            "level": 2,
+                            "is_bundle": 1,
+                            "is_custom": 1,
+                            "childs": []
+                        }
+                    ]
+                },
+                {
+                    "id": 151,
+                    "category_id": 76,
+                    "parent_id": 67,
+                    "title": "Fitness",
+                    "logo": "/storage/categories/IXMh6ytKBlGUMt4ps3ybhCyuIAbQLEhkiaGvdQFU.jpg",
+                    "view_status": 1,
+                    "level": 1,
+                    "is_bundle": 1,
+                    "is_custom": 1,
+                    "childs": [
+                        {
+                            "id": 153,
+                            "category_id": 77,
+                            "parent_id": 76,
+                            "title": "Dumbbells",
+                            "logo": "/storage/categories/zgnvZdtPHmh9USNEQtEaFGlfjApyM3fAKlM6qftC.jpg",
+                            "view_status": 1,
+                            "level": 2,
+                            "is_bundle": 1,
+                            "is_custom": 1,
+                            "childs": []
+                        },
+                        {
+                            "id": 155,
+                            "category_id": 78,
+                            "parent_id": 76,
+                            "title": "Yoga Accessories",
+                            "logo": "/storage/categories/2tO8yQJXuUvGxv1xQ695Ds5vxImJoOz3IW0v3BPj.jpg",
+                            "view_status": 1,
+                            "level": 2,
+                            "is_bundle": 1,
+                            "is_custom": 1,
+                            "childs": []
+                        },
+                        {
+                            "id": 157,
+                            "category_id": 79,
+                            "parent_id": 76,
+                            "title": "Exercise Machines",
+                            "logo": "/storage/categories/s8uu1BtejpeDO0ILlvdTFLFrklebyJWOfoLkMxVV.jpg",
+                            "view_status": 1,
+                            "level": 2,
+                            "is_bundle": 1,
+                            "is_custom": 1,
+                            "childs": []
+                        }
+                    ]
+                },
+                {
+                    "id": 159,
+                    "category_id": 80,
+                    "parent_id": 67,
+                    "title": "Apparel",
+                    "logo": "/storage/categories/DmVkFrVYS8F13TQHUZri9wPpruHAVnJ4dWcMeFuE.jpg",
+                    "view_status": 1,
+                    "level": 1,
+                    "is_bundle": 1,
+                    "is_custom": 1,
+                    "childs": [
+                        {
+                            "id": 161,
+                            "category_id": 81,
+                            "parent_id": 80,
+                            "title": "Sports Shoes",
+                            "logo": "/storage/categories/mtL8hAwjwVPiMXqAKwxIA9YjguVUrqINeKd8YrAI.jpg",
+                            "view_status": 1,
+                            "level": 2,
+                            "is_bundle": 1,
+                            "is_custom": 1,
+                            "childs": []
+                        },
+                        {
+                            "id": 163,
+                            "category_id": 82,
+                            "parent_id": 80,
+                            "title": "Tracksuits",
+                            "logo": "/storage/categories/hQAjeg7QFbfhJWXZTicfuKcIgVaO1CIvjL0otOMV.jpg",
+                            "view_status": 1,
+                            "level": 2,
+                            "is_bundle": 1,
+                            "is_custom": 1,
+                            "childs": []
+                        },
+                        {
+                            "id": 165,
+                            "category_id": 83,
+                            "parent_id": 80,
+                            "title": "Activewear",
+                            "logo": "/storage/categories/rRqBObEnSdmaY6yOjcV2Kdse4FnNlL0uUROnq5sl.jpg",
+                            "view_status": 1,
+                            "level": 2,
+                            "is_bundle": 1,
+                            "is_custom": 1,
+                            "childs": []
+                        }
+                    ]
+                },
+                {
+                    "id": 354,
+                    "category_id": 187,
+                    "parent_id": 67,
+                    "title": "test",
+                    "logo": "/storage/categories/cLh7pxdEZcenGdHI89p8ultCuQlakR9reSn5EGdC.jpg",
+                    "view_status": 1,
+                    "level": 1,
+                    "is_bundle": 1,
+                    "is_custom": 0,
+                    "childs": []
+                }
+            ]
+        },
+        {
+            "category_id": 49,
+            "title": "Health & Beauty",
+            "logo": "/storage/categories/Cwy1WDW5fCmYD22MAl2UYOIb2Fon49LmTKh1YcCU.jpg",
+            "view_status": 1,
+            "level": 0,
+            "childs": [
+                {
+                    "id": 99,
+                    "category_id": 50,
+                    "parent_id": 49,
+                    "title": "Skin Care",
+                    "logo": "/storage/categories/AZ05iji8YXiaFdLZfCpMEyOXL9PFoLHPR7epIwXd.jpg",
+                    "view_status": 1,
+                    "level": 1,
+                    "is_bundle": 1,
+                    "is_custom": 1,
+                    "childs": [
+                        {
+                            "id": 101,
+                            "category_id": 51,
+                            "parent_id": 50,
+                            "title": "Moisturizers",
+                            "logo": "/storage/categories/3uOrOlvR8Ri7pi1KoYpMJ3UrI0BzeOjhZ1p9fEBp.jpg",
+                            "view_status": 1,
+                            "level": 2,
+                            "is_bundle": 1,
+                            "is_custom": 1,
+                            "childs": []
+                        },
+                        {
+                            "id": 103,
+                            "category_id": 52,
+                            "parent_id": 50,
+                            "title": "Face Wash",
+                            "logo": "/storage/categories/CYENdNJgutL13ERHiMcPnPgXpUeuoEAWA5YyjsTq.jpg",
+                            "view_status": 1,
+                            "level": 2,
+                            "is_bundle": 1,
+                            "is_custom": 1,
+                            "childs": []
+                        },
+                        {
+                            "id": 105,
+                            "category_id": 53,
+                            "parent_id": 50,
+                            "title": "Sunscreens",
+                            "logo": "/storage/categories/zaDr6daLTJuPs2NnOJZqwDKIPTNBgEQ3Q4usHETQ.jpg",
+                            "view_status": 1,
+                            "level": 2,
+                            "is_bundle": 1,
+                            "is_custom": 1,
+                            "childs": []
+                        }
+                    ]
+                },
+                {
+                    "id": 107,
+                    "category_id": 54,
+                    "parent_id": 49,
+                    "title": "Hair Care",
+                    "logo": "/storage/categories/Yigu3RJ6cGaYZxeYLLHpDga545gJ6DUaRXOSqscA.jpg",
+                    "view_status": 1,
+                    "level": 1,
+                    "is_bundle": 1,
+                    "is_custom": 1,
+                    "childs": [
+                        {
+                            "id": 111,
+                            "category_id": 56,
+                            "parent_id": 54,
+                            "title": "Shampoos",
+                            "logo": "/storage/categories/Zh2zjh80nvLSAX8OqD2lyaxW20fm5ko6Vv0aL6Xw.jpg",
+                            "view_status": 1,
+                            "level": 2,
+                            "is_bundle": 1,
+                            "is_custom": 1,
+                            "childs": []
+                        },
+                        {
+                            "id": 113,
+                            "category_id": 57,
+                            "parent_id": 54,
+                            "title": "Conditioners",
+                            "logo": "/storage/categories/GpgICWk9qkNHjDxQWqjhTPIeppAF9olCqVEM7VoR.jpg",
+                            "view_status": 1,
+                            "level": 2,
+                            "is_bundle": 1,
+                            "is_custom": 1,
+                            "childs": []
+                        },
+                        {
+                            "id": 115,
+                            "category_id": 58,
+                            "parent_id": 54,
+                            "title": "Hair Tools",
+                            "logo": "/storage/categories/sBqlWdjAvvbRrhfYMCadixb3Qc8vqkPmFonQzs6p.jpg",
+                            "view_status": 1,
+                            "level": 2,
+                            "is_bundle": 1,
+                            "is_custom": 1,
+                            "childs": []
+                        }
+                    ]
+                },
+                {
+                    "id": 117,
+                    "category_id": 59,
+                    "parent_id": 49,
+                    "title": "Makeup",
+                    "logo": "/storage/categories/nd4A5xuZy5a5Q7Ct3CwVmav9eeovO7qGgOAsMdnC.jpg",
+                    "view_status": 1,
+                    "level": 1,
+                    "is_bundle": 1,
+                    "is_custom": 1,
+                    "childs": [
+                        {
+                            "id": 119,
+                            "category_id": 60,
+                            "parent_id": 59,
+                            "title": "Lipsticks",
+                            "logo": "/storage/categories/oYamKatNMAeVKFCuPK9ucO9NXshIfub9FpTtYnwu.jpg",
+                            "view_status": 1,
+                            "level": 2,
+                            "is_bundle": 1,
+                            "is_custom": 1,
+                            "childs": []
+                        },
+                        {
+                            "id": 121,
+                            "category_id": 61,
+                            "parent_id": 59,
+                            "title": "Foundations",
+                            "logo": "/storage/categories/hw8RZfldLtmhfgwHxDGNkPMTQD8U1eYZMsWuuXa4.jpg",
+                            "view_status": 1,
+                            "level": 2,
+                            "is_bundle": 1,
+                            "is_custom": 1,
+                            "childs": []
+                        },
+                        {
+                            "id": 123,
+                            "category_id": 62,
+                            "parent_id": 59,
+                            "title": "Eye Makeup",
+                            "logo": "/storage/categories/2v3fc4gJu3NeX2jEjCzGSDrAZ0TO2d4SKMI3ydOo.jpg",
+                            "view_status": 1,
+                            "level": 2,
+                            "is_bundle": 1,
+                            "is_custom": 1,
+                            "childs": []
+                        }
+                    ]
+                },
+                {
+                    "id": 125,
+                    "category_id": 63,
+                    "parent_id": 49,
+                    "title": "Wellness",
+                    "logo": "/storage/categories/OKxVDndEJT6XZBGdttrnHOWhy0BAJLnNKnZRM1ul.jpg",
+                    "view_status": 1,
+                    "level": 1,
+                    "is_bundle": 1,
+                    "is_custom": 1,
+                    "childs": [
+                        {
+                            "id": 127,
+                            "category_id": 64,
+                            "parent_id": 63,
+                            "title": "Supplements",
+                            "logo": "/storage/categories/zYAVQGtrMVrbUY5MdM0FtncL7vdAKthWdoF844uF.jpg",
+                            "view_status": 1,
+                            "level": 2,
+                            "is_bundle": 1,
+                            "is_custom": 1,
+                            "childs": []
+                        },
+                        {
+                            "id": 129,
+                            "category_id": 65,
+                            "parent_id": 63,
+                            "title": "Yoga Mats",
+                            "logo": "/storage/categories/xKF7RS087D7S4p3RKi7LefFsK6ewaECH0CBRkyoR.jpg",
+                            "view_status": 1,
+                            "level": 2,
+                            "is_bundle": 1,
+                            "is_custom": 1,
+                            "childs": []
+                        },
+                        {
+                            "id": 131,
+                            "category_id": 66,
+                            "parent_id": 63,
+                            "title": "Fitness Bands",
+                            "logo": "/storage/categories/dS69fpdcB8S1HxSeQSKNfoag9PRLPRY1CVpxixfk.jpg",
+                            "view_status": 1,
+                            "level": 2,
+                            "is_bundle": 1,
+                            "is_custom": 1,
+                            "childs": []
+                        }
+                    ]
+                },
+                {
+                    "id": 286,
+                    "category_id": 143,
+                    "parent_id": 49,
+                    "title": "test",
+                    "logo": "categories/def.jpg",
+                    "view_status": 1,
+                    "level": 1,
+                    "is_bundle": 1,
+                    "is_custom": 1,
+                    "childs": []
+                }
+            ]
+        },
+        {
+            "category_id": 29,
+            "title": "Home & Kitchen",
+            "logo": "/storage/categories/9VkDjRxyYvvgpXzU8zEFYfkycmTZp42lMxfAjs3B.jpg",
+            "view_status": 1,
+            "level": 0,
+            "childs": [
+                {
+                    "id": 59,
+                    "category_id": 30,
+                    "parent_id": 29,
+                    "title": "Kitchenware",
+                    "logo": "/storage/categories/emiUoJ5UwfCulMzpIJYt8FeyisFNmokKmIuM9RMy.jpg",
+                    "view_status": 1,
+                    "level": 1,
+                    "is_bundle": 1,
+                    "is_custom": 1,
+                    "childs": [
+                        {
+                            "id": 61,
+                            "category_id": 31,
+                            "parent_id": 30,
+                            "title": "Cookware",
+                            "logo": "/storage/categories/12GXTCx5bJyoK5Sepenj707ai6jjMsXCCSv55cN9.jpg",
+                            "view_status": 1,
+                            "level": 2,
+                            "is_bundle": 1,
+                            "is_custom": 1,
+                            "childs": []
+                        },
+                        {
+                            "id": 65,
+                            "category_id": 33,
+                            "parent_id": 30,
+                            "title": "Utensils",
+                            "logo": "/storage/categories/B3S07YbPUfsuNSCfe91BxWehQynf9ZKSs4kQC4ds.jpg",
+                            "view_status": 1,
+                            "level": 2,
+                            "is_bundle": 1,
+                            "is_custom": 1,
+                            "childs": []
+                        },
+                        {
+                            "id": 67,
+                            "category_id": 34,
+                            "parent_id": 30,
+                            "title": "Storage",
+                            "logo": "/storage/categories/X3VfwCVqsDMiakqydbYOXtbKYApUZHBbbYEwH5U7.jpg",
+                            "view_status": 1,
+                            "level": 2,
+                            "is_bundle": 1,
+                            "is_custom": 1,
+                            "childs": []
+                        }
+                    ]
+                },
+                {
+                    "id": 69,
+                    "category_id": 35,
+                    "parent_id": 29,
+                    "title": "Furniture",
+                    "logo": "/storage/categories/TrLFb7A8piIMjSfG0RqNzrLaced3BRM9pmLyQyyE.jpg",
+                    "view_status": 1,
+                    "level": 1,
+                    "is_bundle": 1,
+                    "is_custom": 1,
+                    "childs": [
+                        {
+                            "id": 71,
+                            "category_id": 36,
+                            "parent_id": 35,
+                            "title": "Sofas",
+                            "logo": "/storage/categories/9mlsN4XHZzw32D9pzSc9uSVbo1TI57iJ7mWWynhc.jpg",
+                            "view_status": 1,
+                            "level": 2,
+                            "is_bundle": 1,
+                            "is_custom": 1,
+                            "childs": []
+                        },
+                        {
+                            "id": 73,
+                            "category_id": 37,
+                            "parent_id": 35,
+                            "title": "Beds",
+                            "logo": "/storage/categories/wAgOYapP7NjTwFOj69WZDBf1P0DB7WMIHdREnrC1.jpg",
+                            "view_status": 1,
+                            "level": 2,
+                            "is_bundle": 1,
+                            "is_custom": 1,
+                            "childs": []
+                        },
+                        {
+                            "id": 75,
+                            "category_id": 38,
+                            "parent_id": 35,
+                            "title": "Tables",
+                            "logo": "/storage/categories/WcGU3fpSnJpVpgHzxtGxXDaj6jxOsEx1YAyaRIrZ.jpg",
+                            "view_status": 1,
+                            "level": 2,
+                            "is_bundle": 1,
+                            "is_custom": 1,
+                            "childs": []
+                        }
+                    ]
+                },
+                {
+                    "id": 77,
+                    "category_id": 39,
+                    "parent_id": 29,
+                    "title": "Home Decor",
+                    "logo": "/storage/categories/ww5iVa1QzmJyfcMXQFkJTYX6FdVX7XUuioJNPLhZ.jpg",
+                    "view_status": 1,
+                    "level": 1,
+                    "is_bundle": 1,
+                    "is_custom": 1,
+                    "childs": [
+                        {
+                            "id": 79,
+                            "category_id": 40,
+                            "parent_id": 39,
+                            "title": "Curtains",
+                            "logo": "/storage/categories/ic57pOe9IrvGMVAjyjV3ML14ch1VHH2LP7aS5SNF.jpg",
+                            "view_status": 1,
+                            "level": 2,
+                            "is_bundle": 1,
+                            "is_custom": 1,
+                            "childs": []
+                        },
+                        {
+                            "id": 81,
+                            "category_id": 41,
+                            "parent_id": 39,
+                            "title": "Wall Art",
+                            "logo": "/storage/categories/WUCt441Ju9GGXO20wZBvB0OcSvyZjbmq0Rf4Si4A.jpg",
+                            "view_status": 1,
+                            "level": 2,
+                            "is_bundle": 1,
+                            "is_custom": 1,
+                            "childs": []
+                        },
+                        {
+                            "id": 83,
+                            "category_id": 42,
+                            "parent_id": 39,
+                            "title": "Rugs",
+                            "logo": "/storage/categories/saHzsU74y7XOD8QmR5d87EI5dNnitjw0RhsUWsQO.jpg",
+                            "view_status": 1,
+                            "level": 2,
+                            "is_bundle": 1,
+                            "is_custom": 1,
+                            "childs": []
+                        }
+                    ]
+                },
+                {
+                    "id": 89,
+                    "category_id": 45,
+                    "parent_id": 29,
+                    "title": "Cleaning Supplies",
+                    "logo": "/storage/categories/IIUTmAp2sz5jDeVB2Fp6IPB0E26U1SYW6ToNRMps.jpg",
+                    "view_status": 1,
+                    "level": 1,
+                    "is_bundle": 1,
+                    "is_custom": 1,
+                    "childs": [
+                        {
+                            "id": 91,
+                            "category_id": 46,
+                            "parent_id": 45,
+                            "title": "Vacuums",
+                            "logo": "/storage/categories/zuLFZXuX9WBH2jeIGxs8RrKxA36q05jD83Z2HHJl.jpg",
+                            "view_status": 1,
+                            "level": 2,
+                            "is_bundle": 1,
+                            "is_custom": 1,
+                            "childs": []
+                        },
+                        {
+                            "id": 93,
+                            "category_id": 47,
+                            "parent_id": 45,
+                            "title": "Mops",
+                            "logo": "/storage/categories/U29cZhaztrBl1QXUhOoc4cq6Kd22tn0u0nU95VvB.jpg",
+                            "view_status": 1,
+                            "level": 2,
+                            "is_bundle": 1,
+                            "is_custom": 1,
+                            "childs": []
+                        },
+                        {
+                            "id": 95,
+                            "category_id": 48,
+                            "parent_id": 45,
+                            "title": "Detergents",
+                            "logo": "/storage/categories/qBQtbNYJtEKHUtEGNv6QndnePSGhfPsypwAYd8ue.jpg",
+                            "view_status": 1,
+                            "level": 2,
+                            "is_bundle": 1,
+                            "is_custom": 1,
+                            "childs": []
+                        }
+                    ]
+                },
+                {
+                    "id": 316,
+                    "category_id": 166,
+                    "parent_id": 29,
+                    "title": "Apartments",
+                    "logo": "/storage/categories/SG4W3hnjgeTiFiB7BPyDwNWuHzUeY8JiS1Z0vHjC.jpg",
+                    "view_status": 1,
+                    "level": 1,
+                    "is_bundle": 1,
+                    "is_custom": 0,
+                    "childs": []
+                }
+            ]
+        },
+        {
+            "category_id": 12,
+            "title": "Clothing",
+            "logo": "/storage/categories/JOI3YUO92S5MyUJ1zGGUj1qb61GSiVRlz4lKFPNe.jpg",
+            "view_status": 1,
+            "level": 0,
+            "childs": [
+                {
+                    "id": 25,
+                    "category_id": 13,
+                    "parent_id": 12,
+                    "title": "Men",
+                    "logo": "/storage/categories/gHKb2gZDJf5Hh3hoxYLgKggXPuMT4bThPAIWDAUB.jpg",
+                    "view_status": 1,
+                    "level": 1,
+                    "is_bundle": 1,
+                    "is_custom": 1,
+                    "childs": [
+                        {
+                            "id": 27,
+                            "category_id": 14,
+                            "parent_id": 13,
+                            "title": "Shirts",
+                            "logo": "/storage/categories/Nw6oWeJXP8w1pbRGFbIfkBlPeqPMyPhVtDwGy3bI.jpg",
+                            "view_status": 1,
+                            "level": 2,
+                            "is_bundle": 1,
+                            "is_custom": 1,
+                            "childs": []
+                        },
+                        {
+                            "id": 29,
+                            "category_id": 15,
+                            "parent_id": 13,
+                            "title": "Trousers",
+                            "logo": "/storage/categories/1YJ62VhnIIYmmcAdzhU1l1pE6K2xf06Tud1rTSw6.jpg",
+                            "view_status": 1,
+                            "level": 2,
+                            "is_bundle": 1,
+                            "is_custom": 1,
+                            "childs": []
+                        },
+                        {
+                            "id": 31,
+                            "category_id": 16,
+                            "parent_id": 13,
+                            "title": "Jackets",
+                            "logo": "/storage/categories/chGHaup2FW9lRjDrBlRLocX7lgbl1wPWHANo04YN.jpg",
+                            "view_status": 1,
+                            "level": 2,
+                            "is_bundle": 1,
+                            "is_custom": 1,
+                            "childs": []
+                        }
+                    ]
+                },
+                {
+                    "id": 33,
+                    "category_id": 17,
+                    "parent_id": 12,
+                    "title": "Women",
+                    "logo": "/storage/categories/aUXTxKsb8rWJ3geBk8dyCYvcCkU1lThAIJaMAFoZ.jpg",
+                    "view_status": 1,
+                    "level": 1,
+                    "is_bundle": 1,
+                    "is_custom": 1,
+                    "childs": [
+                        {
+                            "id": 35,
+                            "category_id": 18,
+                            "parent_id": 17,
+                            "title": "Dresses",
+                            "logo": "/storage/categories/mzMESYmi8RZmGa8IqjCxI6lkONjIOmT622MmL3Mz.jpg",
+                            "view_status": 1,
+                            "level": 2,
+                            "is_bundle": 1,
+                            "is_custom": 1,
+                            "childs": []
+                        },
+                        {
+                            "id": 37,
+                            "category_id": 19,
+                            "parent_id": 17,
+                            "title": "Tops",
+                            "logo": "/storage/categories/kb9iwIBAqxfq7bA1M6mjyeqdBftemsBCl4tpSr0X.jpg",
+                            "view_status": 1,
+                            "level": 2,
+                            "is_bundle": 1,
+                            "is_custom": 1,
+                            "childs": []
+                        },
+                        {
+                            "id": 39,
+                            "category_id": 20,
+                            "parent_id": 17,
+                            "title": "Skirts",
+                            "logo": "/storage/categories/Dny89Rtav1MDX6euMqOMQZk6ZGI9qwAwDT6QkT0G.jpg",
+                            "view_status": 1,
+                            "level": 2,
+                            "is_bundle": 1,
+                            "is_custom": 1,
+                            "childs": []
+                        }
+                    ]
+                },
+                {
+                    "id": 41,
+                    "category_id": 21,
+                    "parent_id": 12,
+                    "title": "Kids",
+                    "logo": "/storage/categories/IvD3Q1haPW1vBBxgQlDu6MwdbdMeJ69sz7TH3BLF.jpg",
+                    "view_status": 1,
+                    "level": 1,
+                    "is_bundle": 1,
+                    "is_custom": 1,
+                    "childs": [
+                        {
+                            "id": 43,
+                            "category_id": 22,
+                            "parent_id": 21,
+                            "title": "T-Shirts",
+                            "logo": "/storage/categories/9ZoxaG7omMvA2rwVaoiDLCFq0Qre4GvUUSnq6MpI.jpg",
+                            "view_status": 1,
+                            "level": 2,
+                            "is_bundle": 1,
+                            "is_custom": 1,
+                            "childs": []
+                        },
+                        {
+                            "id": 45,
+                            "category_id": 23,
+                            "parent_id": 21,
+                            "title": "Pants",
+                            "logo": "/storage/categories/eyxs5k16HQWRs5mdH7jLzvXnvfepLzTddZKlVxN8.jpg",
+                            "view_status": 1,
+                            "level": 2,
+                            "is_bundle": 1,
+                            "is_custom": 1,
+                            "childs": []
+                        },
+                        {
+                            "id": 47,
+                            "category_id": 24,
+                            "parent_id": 21,
+                            "title": "Outerwear",
+                            "logo": "/storage/categories/f9iT9YjvXHU0hjIzgHXfIh4a7DsFdPaYId4T6JHz.jpg",
+                            "view_status": 1,
+                            "level": 2,
+                            "is_bundle": 1,
+                            "is_custom": 1,
+                            "childs": []
+                        }
+                    ]
+                },
+                {
+                    "id": 49,
+                    "category_id": 25,
+                    "parent_id": 12,
+                    "title": "Accessories",
+                    "logo": "/storage/categories/q5mk6P0SDEG54jvqyE48aIvoTEM7e4RBiVQmrzfK.jpg",
+                    "view_status": 1,
+                    "level": 1,
+                    "is_bundle": 1,
+                    "is_custom": 1,
+                    "childs": [
+                        {
+                            "id": 51,
+                            "category_id": 26,
+                            "parent_id": 25,
+                            "title": "Belts",
+                            "logo": "/storage/categories/1k38Zl81dh7snZmRJCHDDxZjPuoMNRNY96ykAadc.jpg",
+                            "view_status": 1,
+                            "level": 2,
+                            "is_bundle": 1,
+                            "is_custom": 1,
+                            "childs": []
+                        },
+                        {
+                            "id": 53,
+                            "category_id": 27,
+                            "parent_id": 25,
+                            "title": "Hats",
+                            "logo": "/storage/categories/sCauRmsHg800C7vkkkRoHJgc9isPW9CFOmTYOKLA.jpg",
+                            "view_status": 1,
+                            "level": 2,
+                            "is_bundle": 1,
+                            "is_custom": 1,
+                            "childs": []
+                        },
+                        {
+                            "id": 55,
+                            "category_id": 28,
+                            "parent_id": 25,
+                            "title": "Scarves",
+                            "logo": "/storage/categories/xj5mrOlRBKkCaa5HNSYo7OAs3P5EqjTn8gSNbIGv.jpg",
+                            "view_status": 1,
+                            "level": 2,
+                            "is_bundle": 1,
+                            "is_custom": 1,
+                            "childs": []
+                        }
+                    ]
+                },
+                {
+                    "id": 284,
+                    "category_id": 142,
+                    "parent_id": 12,
+                    "title": "test",
+                    "logo": "categories/def.jpg",
+                    "view_status": 1,
+                    "level": 1,
+                    "is_bundle": 1,
+                    "is_custom": 1,
+                    "childs": []
+                },
+                {
+                    "id": 288,
+                    "category_id": 144,
+                    "parent_id": 12,
+                    "title": "test",
+                    "logo": "categories/def.jpg",
+                    "view_status": 1,
+                    "level": 1,
+                    "is_bundle": 1,
+                    "is_custom": 1,
+                    "childs": []
+                }
+            ]
+        },
+        {
+            "category_id": 1,
+            "title": "Electronics",
+            "logo": "/storage/categories/Ax931Ojntb94hHdPUmLzSbxOOLEPsSTnpgp7d7qM.jpg",
+            "view_status": 1,
+            "level": 0,
+            "childs": [
+                {
+                    "id": 3,
+                    "category_id": 2,
+                    "parent_id": 1,
+                    "title": "Mobile Phones",
+                    "logo": "/storage/categories/n2oYEpX9pO7BoqwmkZIgPWIPYcC2YMLCkEyDZ4Bf.jpg",
+                    "view_status": 1,
+                    "level": 1,
+                    "is_bundle": 1,
+                    "is_custom": 1,
+                    "childs": [
+                        {
+                            "id": 5,
+                            "category_id": 3,
+                            "parent_id": 2,
+                            "title": "Smartphones",
+                            "logo": "/storage/categories/DPJKzKSh0lEiUwuto976LGNfhqU3W1MhKKTKLN02.jpg",
+                            "view_status": 1,
+                            "level": 2,
+                            "is_bundle": 1,
+                            "is_custom": 1,
+                            "childs": [
+                                {
+                                    "id": 296,
+                                    "category_id": 148,
+                                    "parent_id": 3,
+                                    "title": "ENGLISH NAME",
+                                    "logo": "/storage/categories/ia0VVyQx3ynWkcaBzb8F0UtPONO5xdYPZbp4jjR1.webp",
+                                    "view_status": 1,
+                                    "level": 3,
+                                    "is_bundle": 1,
+                                    "is_custom": 0,
+                                    "childs": []
+                                }
+                            ]
+                        },
+                        {
+                            "id": 7,
+                            "category_id": 4,
+                            "parent_id": 2,
+                            "title": "Accessories",
+                            "logo": "/storage/categories/3uWMGoz1HQxSdkPZDzhLPqup4ykZSnMy8YZ8DrXz.jpg",
+                            "view_status": 1,
+                            "level": 2,
+                            "is_bundle": 1,
+                            "is_custom": 1,
+                            "childs": []
+                        },
+                        {
+                            "id": 290,
+                            "category_id": 145,
+                            "parent_id": 2,
+                            "title": "123",
+                            "logo": "/storage/categories/bahNo30Jc2LrPHV0hH2jPz9f0XDLaIUErMMC2OfD.png",
+                            "view_status": 1,
+                            "level": 2,
+                            "is_bundle": 1,
+                            "is_custom": 1,
+                            "childs": []
+                        }
+                    ]
+                },
+                {
+                    "id": 9,
+                    "category_id": 5,
+                    "parent_id": 1,
+                    "title": "Laptops",
+                    "logo": "/storage/categories/HTzbjMpfUUKlEJfh2ho2LW9qgGCm1B08jyzVcQpV.jpg",
+                    "view_status": 1,
+                    "level": 1,
+                    "is_bundle": 1,
+                    "is_custom": 1,
+                    "childs": [
+                        {
+                            "id": 11,
+                            "category_id": 6,
+                            "parent_id": 5,
+                            "title": "Gaming Laptops",
+                            "logo": "/storage/categories/GOBNuUAd8daVq8O1ea0c3kVBMl7lPNxsFDciKdJv.jpg",
+                            "view_status": 1,
+                            "level": 2,
+                            "is_bundle": 1,
+                            "is_custom": 1,
+                            "childs": []
+                        },
+                        {
+                            "id": 13,
+                            "category_id": 7,
+                            "parent_id": 5,
+                            "title": "Ultrabooks",
+                            "logo": "/storage/categories/sz6uaXfHrr1jdqQdQRp81rlFgj9KgKW1vKxPbNou.jpg",
+                            "view_status": 1,
+                            "level": 2,
+                            "is_bundle": 1,
+                            "is_custom": 1,
+                            "childs": []
+                        }
+                    ]
+                },
+                {
+                    "id": 15,
+                    "category_id": 8,
+                    "parent_id": 1,
+                    "title": "Cameras",
+                    "logo": "/storage/categories/KrifVxLRFUyL7pZYWbUREUkuxy38U8kiFhrX0iPd.jpg",
+                    "view_status": 1,
+                    "level": 1,
+                    "is_bundle": 1,
+                    "is_custom": 1,
+                    "childs": [
+                        {
+                            "id": 17,
+                            "category_id": 9,
+                            "parent_id": 8,
+                            "title": "DSLR",
+                            "logo": "/storage/categories/SJBatb3obpfOjdji69cb2IUtlj9x1vGRa9vB160g.jpg",
+                            "view_status": 1,
+                            "level": 2,
+                            "is_bundle": 1,
+                            "is_custom": 1,
+                            "childs": []
+                        },
+                        {
+                            "id": 19,
+                            "category_id": 10,
+                            "parent_id": 8,
+                            "title": "Mirrorless",
+                            "logo": "/storage/categories/2Otmmw96MPCSmKahS43hQlOtFzIzPiNEo4tjEoyQ.jpg",
+                            "view_status": 1,
+                            "level": 2,
+                            "is_bundle": 1,
+                            "is_custom": 1,
+                            "childs": []
+                        },
+                        {
+                            "id": 21,
+                            "category_id": 11,
+                            "parent_id": 8,
+                            "title": "Accessories",
+                            "logo": "/storage/categories/N6efpuNcMO8oPZ8F9ggk7UHYjcxeIhPwZp9sDRoZ.jpg",
+                            "view_status": 1,
+                            "level": 2,
+                            "is_bundle": 1,
+                            "is_custom": 1,
+                            "childs": []
+                        }
+                    ]
+                },
+                {
+                    "id": 280,
+                    "category_id": 140,
+                    "parent_id": 1,
+                    "title": "Smart Screen",
+                    "logo": "/storage/categories/yHM2sdeTIYWbPforUk8Vp9nvq2FZOTKa41GRMmVz.png",
+                    "view_status": 1,
+                    "level": 1,
+                    "is_bundle": 1,
+                    "is_custom": 1,
+                    "childs": []
+                }
+            ]
+        }
+    ],
+    "messages": [],
+    "code": 200
+} شو افضل طريقة لعمل الكاتيغروي بتطبيق 

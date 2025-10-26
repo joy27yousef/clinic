@@ -1,17 +1,19 @@
-import 'package:clinik_app/core/class/crud.dart';
+import 'package:clinik_app/core/api/dioConsumer.dart';
 import 'package:clinik_app/core/class/statusRequest.dart';
-import 'package:clinik_app/core/data/remote/admin/patients.dart';
+import 'package:clinik_app/core/data/models/admin/recordModel.dart';
+import 'package:clinik_app/core/errors/errorModel.dart';
+import 'package:clinik_app/core/repo/AppRepository.dart';
+import 'package:dio/dio.dart';
 import 'package:get/get.dart';
-import 'package:get/get_state_manager/src/simple/get_controllers.dart';
 
 class PatientStatisticsController extends GetxController {
-  final PatientsData patientsData = PatientsData(crud: Get.find<Crud>());
-  final RecordsData recordsData = RecordsData(crud: Get.find<Crud>());
+  late final AppRepository repo;
+  final error = Rxn<ErrorModel>();
 
   Statusrequest statusrequest = Statusrequest.none;
 
-  var patientsList = <Map<String, dynamic>>[];
-  var recordsList = <Map<String, dynamic>>[];
+  var patientsList = RxnInt(); // إجمالي عدد المرضى
+  var recordsData = Rxn<MedicalRecordsStatsDataModel>(); // بيانات الإحصائيات
 
   List<String> title = [
     'إجمالي عدد المرضى',
@@ -20,11 +22,10 @@ class PatientStatisticsController extends GetxController {
     'عدد السجلات  الحاوية تشخيص',
   ];
 
-  late int totalPatient = 0;
-
   @override
   void onInit() {
     super.onInit();
+    repo = AppRepository(api: DioConsumer(dio: Dio()));
     getPatientsData();
     getRecordsData();
   }
@@ -32,21 +33,17 @@ class PatientStatisticsController extends GetxController {
   Future<void> getPatientsData() async {
     statusrequest = Statusrequest.loading;
     update();
-
-    var response = await patientsData.getData();
+    var response = await repo.patientListData();
 
     response.fold(
       (failure) {
         statusrequest = Statusrequest.serverfailure;
+        error.value = failure;
         update();
       },
-      (data) {
-        if (data['status'] == true) {
-          patientsList.clear();
-          patientsList.addAll(
-            List<Map<String, dynamic>>.from(data['data']['data']),
-          );
-          totalPatient = patientsList.length;
+      (patientListModel) {
+        if (patientListModel.status == true) {
+          patientsList.value = patientListModel.data!.total ?? 0;
           statusrequest = Statusrequest.success;
         } else {
           statusrequest = Statusrequest.failure;
@@ -60,20 +57,17 @@ class PatientStatisticsController extends GetxController {
     statusrequest = Statusrequest.loading;
     update();
 
-    var response = await recordsData.getData();
+    var response = await repo.recordData();
 
     response.fold(
       (failure) {
         statusrequest = Statusrequest.serverfailure;
+        error.value = failure;
         update();
       },
-      (data) {
-        if (data['status'] == true) {
-          recordsList.clear();
-
-          // ✅ نحول الـ Map إلى عنصر واحد داخل List
-          recordsList.add(Map<String, dynamic>.from(data['data']));
-
+      (medicalRecordsStatsModel) {
+        if (medicalRecordsStatsModel.status == true) {
+          recordsData.value = medicalRecordsStatsModel.data;
           statusrequest = Statusrequest.success;
         } else {
           statusrequest = Statusrequest.failure;

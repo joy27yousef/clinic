@@ -9,7 +9,7 @@ ThemeData ThemeApp = ThemeData(
   appBarTheme: AppBarTheme(
     scrolledUnderElevation: 0,
     titleTextStyle: TextStyle(
-      color: Colors.black,
+      color: Appcolor.primarytext,
       fontSize: 20,
       fontFamily: AppFonts.Cairo,
       fontWeight: FontWeight.bold,

@@ -48,7 +48,7 @@ class TextFormGen extends StatelessWidget {
           onTap: onTapicon,
           child: iconform,
         ),
-        focusColor: Appcolor.baselight,
+        focusColor: Appcolor.base,
         filled: true,
         fillColor: Theme.of(context).colorScheme.background,
         // const Color.fromARGB(255, 250, 249, 255),
@@ -58,11 +58,11 @@ class TextFormGen extends StatelessWidget {
         ),
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(15),
-          borderSide: BorderSide(color: Appcolor.baselight, width: 2),
+          borderSide: BorderSide(color: Appcolor.base, width: 2),
         ),
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(15),
-          borderSide: BorderSide(color: Appcolor.baselight, width: 2),
+          borderSide: BorderSide(color: Appcolor.base, width: 2),
         ),
         label: Container(
           margin: EdgeInsets.all(10),

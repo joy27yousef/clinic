@@ -1,58 +1,58 @@
-import 'package:clinik_app/core/data/remote/admin/appointments.dart';
-import 'package:clinik_app/core/data/remote/doctor/appointments.dart';
+import 'package:clinik_app/core/api/dioConsumer.dart';
+import 'package:clinik_app/core/errors/errorModel.dart';
+import 'package:clinik_app/core/repo/AppRepository.dart';
+import 'package:dio/dio.dart';
 import 'package:get/get.dart';
-import 'package:clinik_app/core/class/crud.dart';
 import 'package:clinik_app/core/class/statusRequest.dart';
+import 'package:clinik_app/core/data/models/admin/appointmentsModel.dart';
 
-class AppointmentsSatisticsController extends GetxController {
-  final AppointmentsStatsData appointmentsData = AppointmentsStatsData(
-    crud: Get.find<Crud>(),
-  );
+class AppointmentsStatisticsController extends GetxController { 
+
+  late final AppRepository repo;
+  final error = Rxn<ErrorModel>();
   Statusrequest statusrequest = Statusrequest.none;
-
-  var appointmentStats = <String, dynamic>{}.obs;
+  var appointmentStats = Rxn<AppointmentsStatsDataModel>();
 
   @override
   void onInit() {
     super.onInit();
-    getAppointmentsStatsData();
+    repo = AppRepository(api: DioConsumer(dio: Dio()));
+
+    getAppointmentsStats();
   }
 
-  List title = [
+  List<String> titles = [
     'إجمالي عدد المواعيد',
     'المواعيد المجدولة',
     'المواعيد المكتملة',
     'المواعيد الملغية',
   ];
+
   double get completionRate {
-    if (!appointmentStats.containsKey('total_appointments') ||
-        appointmentStats['total_appointments'] == 0)
+    if (appointmentStats.value == null ||
+        appointmentStats.value!.totalAppointments == 0)
       return 0.0;
-    return (appointmentStats['completed_appointments'] ?? 0) /
-        appointmentStats['total_appointments'];
+    return appointmentStats.value!.completedAppointments /
+        appointmentStats.value!.totalAppointments;
   }
 
-  Future<void> getAppointmentsStatsData() async {
+  Future<void> getAppointmentsStats() async {
     statusrequest = Statusrequest.loading;
     update();
 
-    var response = await appointmentsData.getData();
-
+    final response = await repo.appointmentsStatsData();
     response.fold(
       (failure) {
+        error.value = failure;
         statusrequest = Statusrequest.serverfailure;
         update();
-        print("❌ Server error");
       },
-      (data) {
-        if (data['status'] == true) {
-          appointmentStats.clear();
-          appointmentStats.value = Map<String, dynamic>.from(data['data']);
-
+      (appointmentsStatsModel) {
+        if (appointmentsStatsModel.status == true) {
+          appointmentStats.value = appointmentsStatsModel.data;
           statusrequest = Statusrequest.success;
         } else {
           statusrequest = Statusrequest.failure;
-          print("⚠️ Error in response");
         }
         update();
       },

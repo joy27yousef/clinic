@@ -1,83 +1,84 @@
+import 'package:clinik_app/core/api/dioConsumer.dart';
+import 'package:clinik_app/core/data/models/admin/doctorListModel.dart';
+import 'package:clinik_app/core/errors/errorModel.dart';
+import 'package:clinik_app/core/repo/AppRepository.dart';
+import 'package:dio/dio.dart';
 import 'package:get/get.dart';
-import 'package:clinik_app/core/class/crud.dart';
 import 'package:clinik_app/core/class/statusRequest.dart';
-import 'package:clinik_app/core/data/remote/admin/doctors.dart';
 
 class DoctorsStatisticsController extends GetxController {
-  final DoctorsData doctorsData = DoctorsData(crud: Get.find<Crud>());
+  late final AppRepository repo;
+  final error = Rxn<ErrorModel>();
+  var doctorsList = <DoctorModel>[].obs;
   Statusrequest statusrequest = Statusrequest.none;
 
   var selectedFilter = 0.obs;
-  var doctorsList = <Map<String, dynamic>>[].obs;
 
-  late int totalDoctors;
-  late int availableDoctors;
-  late int unavailableDoctors;
-  late int specializationsCount;
-  @override
-  void onInit() {
-    super.onInit();
-    getDoctorsData();
-  }
+  int totalDoctors = 0;
+  int availableDoctors = 0;
+  int unavailableDoctors = 0;
+  int specializationsCount = 0;
 
   final filters = ["الكل", "المتاحون", "غير المتاحين"];
-  List title = [
+  List<String> title = [
     'إجمالي عدد الأطباء',
     'الأطباء المتاحون',
     'الأطباء غير المتاحين',
     'عدد الاختصاصات',
   ];
-  List<Map<String, dynamic>> get filteredDoctors {
+
+  @override
+  void onInit() {
+    super.onInit();
+    repo = AppRepository(api: DioConsumer(dio: Dio()));
+
+    getDoctors();
+  }
+  List<DoctorModel> get filteredDoctors {
     if (selectedFilter.value == 1) {
-      return doctorsList.where((d) => d["is_available"] == true).toList();
+      return doctorsList.where((d) => d.isAvailable == true).toList();
     } else if (selectedFilter.value == 2) {
-      return doctorsList.where((d) => d["is_available"] == false).toList();
+      return doctorsList.where((d) => d.isAvailable == false).toList();
     }
     return doctorsList;
   }
 
-  Future<void> getDoctorsData() async {
+  Future<void> getDoctors() async {
     statusrequest = Statusrequest.loading;
     update();
-
-    var response = await doctorsData.getData();
-
+    var response = await repo.doctorListdata();
     response.fold(
       (failure) {
         statusrequest = Statusrequest.serverfailure;
+        error.value = failure;
         update();
-        print("❌ Server error");
       },
-      (data) {
-        if (data['status'] == true) {
-          doctorsList.clear();
-          doctorsList.addAll(
-            List<Map<String, dynamic>>.from(data['data']['data']),
-          );
+      (doctorListModel) {
+        if (doctorListModel.status) {
+          doctorsList.value = doctorListModel.data?.doctors ?? [];
           totalDoctors = doctorsList.length;
           availableDoctors = doctorsList
-              .where((d) => d["is_available"] == true)
+              .where((d) => d.isAvailable == true)
               .length;
           unavailableDoctors = doctorsList
-              .where((d) => d["is_available"] == false)
+              .where((d) => d.isAvailable == false)
               .length;
           specializationsCount = doctorsList
-              .map((d) => d["specialization"])
+              .map((d) => d.specialization)
               .toSet()
               .length;
+
           statusrequest = Statusrequest.success;
         } else {
           statusrequest = Statusrequest.failure;
-          print("⚠️ Error in response");
         }
         update();
       },
     );
   }
 
+  /// تغيير الفلتر
   void selectFilter(int index) {
     selectedFilter.value = index;
   }
-
-  static find() {}
 }
