@@ -10,6 +10,7 @@ import 'package:clinik_app/core/data/models/admin/recordModel.dart';
 import 'package:clinik_app/core/data/models/admin/reports/appointmentsRevenue.dart';
 import 'package:clinik_app/core/data/models/admin/reports/comprehensiveReport.dart';
 import 'package:clinik_app/core/data/models/admin/reports/monthluReports.dart';
+import 'package:clinik_app/core/data/models/auth/changePassModel.dart';
 import 'package:clinik_app/core/data/models/auth/loginModel.dart';
 import 'package:clinik_app/core/data/models/auth/logoutModel.dart';
 import 'package:clinik_app/core/data/models/doctor/doctorScheduleModel.dart';
@@ -20,44 +21,7 @@ import 'package:dartz/dartz.dart';
 class AppRepository {
   final ApiConsumer api;
   AppRepository({required this.api});
-  // Future<Either<ErrorModel, LoginModel>> loginData(
-  //   String email,
-  //   String password,
-  // ) async {
-  //   try {
-  //     final response = await api.post(
-  //       AppEndpoint.login,
-  //       data: {ApiKey.identifier: email, ApiKey.password: password},
-  //       withToken: false,
-  //     );
-  //     // final userLogin = LoginModel.fromJson(response);
-  //     final userLogin = LoginModel.fromJson(response);
 
-  //     print('hiiiiiiiiiiiiiiiiiiiiiiiiiiii');
-
-  //     CacheHelper().removeData(key: GeneralKey.token);
-  //     CacheHelper().removeData(key: GeneralKey.userName);
-  //     CacheHelper().removeData(key: GeneralKey.userId);
-  //     CacheHelper().saveData(
-  //       key: GeneralKey.token,
-  //       value: userLogin.data!.token,
-  //     );
-  //     CacheHelper().saveData(
-  //       key: GeneralKey.userId,
-  //       value: userLogin.data!.user!.id,
-  //     );
-  //     CacheHelper().saveData(
-  //       key: GeneralKey.userName,
-  //       value: userLogin.data!.user!.name,
-  //     );
-
-  //     return Right(userLogin);
-  //   } on ServerException catch (e) {
-  //     return Left(e.errModel);
-  //   } catch (e) {
-  //     return Left(ErrorModel(status: 500, errorMessage: e.toString()));
-  //   }
-  // }
   Future<Either<ErrorModel, LoginModel>> loginData(
     String email,
     String password,
@@ -138,6 +102,53 @@ class AppRepository {
     } on ServerException catch (e) {
       return Left(e.errModel);
     } catch (e) {
+      return Left(ErrorModel(status: 500, errorMessage: e.toString()));
+    }
+  }
+
+  Future<Either<ErrorModel, ChangePasswordModel>> changePasswordData(
+    String password,
+    String conpassword,
+  ) async {
+    try {
+      final response = await api.post(
+        AppEndpoint.changePassword,
+        data: {ApiKey.password: password, ApiKey.conpassword: conpassword},
+        withToken: true,
+      );
+
+      // --- Debug: Print raw response ---
+      print('--- RAW RESPONSE ---');
+      print(response);
+      print('--- RESPONSE TYPE: ${response.runtimeType} ---');
+
+      // --- Ensure response is Map<String, dynamic> ---
+      Map<String, dynamic> dataMap;
+      if (response is String) {
+        dataMap = jsonDecode(response);
+      } else if (response is Map<String, dynamic>) {
+        dataMap = response;
+      } else if (response.data != null) {
+        dataMap = response.data is String
+            ? jsonDecode(response.data)
+            : response.data as Map<String, dynamic>;
+      } else {
+        throw Exception('Unexpected response type: ${response.runtimeType}');
+      }
+
+      // --- Parse JSON to ChangePasswordModel ---
+      final changePasswordModel = ChangePasswordModel.fromJson(dataMap);
+      print('--- Parsed ChangePasswordModel ---');
+      print('Status: ${changePasswordModel.status}');
+      print('Message: ${changePasswordModel.messages}');
+      print('Code: ${changePasswordModel.code}');
+
+      return Right(changePasswordModel);
+    } on ServerException catch (e) {
+      return Left(e.errModel);
+    } catch (e) {
+      print('--- CHANGE PASSWORD ERROR ---');
+      print(e.toString());
       return Left(ErrorModel(status: 500, errorMessage: e.toString()));
     }
   }

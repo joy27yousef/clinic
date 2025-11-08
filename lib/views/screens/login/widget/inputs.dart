@@ -33,9 +33,7 @@ class Inputs extends StatelessWidget {
             iconform: Icon(Icons.email_rounded, color: Appcolor.base),
             typekey: TextInputType.emailAddress,
             mycontroller: controller.email,
-            valid: (val) {
-              return validInput(val!, 3, 100, '');
-            },
+            valid: (value) => FieldsValidator.validateEmpty(value ?? ''),
           ),
           SizedBox(height: 15),
           Text(
@@ -48,9 +46,8 @@ class Inputs extends StatelessWidget {
           SizedBox(height: 15),
           GetBuilder<AuthController>(
             builder: (controller) => TextFormGen(
-              valid: (val) {
-                return validInput(val!, 5, 100, 'password');
-              },
+              valid: (value) =>
+                  FieldsValidator.validatePassword(password: value ?? ''),
               hint: 'كلمة المرور',
               lable: 'ادخل كملة المرور',
               iconform: Icon(

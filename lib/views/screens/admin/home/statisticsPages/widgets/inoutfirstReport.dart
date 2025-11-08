@@ -160,6 +160,7 @@ class InoutfirstReport extends StatelessWidget {
             SizedBox(height: 15),
             const SizedBox(height: 15),
             Container(
+              width: double.infinity,
               decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(12),
@@ -195,6 +196,7 @@ class InoutfirstReport extends StatelessWidget {
                     ),
                   ),
                 ],
+
                 rows: totaldata!.expenses!.byCategory
                     .map(
                       (e) => DataRow(
@@ -204,7 +206,7 @@ class InoutfirstReport extends StatelessWidget {
                               future: translateText(e.category, 'ar'),
                               builder: (context, snapshot) {
                                 if (!snapshot.hasData) {
-                                  return const Text("...");
+                                  return const Text("");
                                 }
                                 return Text(
                                   snapshot.data!,
@@ -217,7 +219,6 @@ class InoutfirstReport extends StatelessWidget {
                               },
                             ),
                           ),
-
                           DataCell(
                             Text(
                               '${e.total}',

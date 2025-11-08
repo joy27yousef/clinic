@@ -15,7 +15,7 @@ class ChartDoctor extends StatelessWidget {
     final chartDoctorData = doctorData!
         .map(
           (e) => _DoctorRevenueData(
-            e.doctor!.name,
+            e.doctor?.name ?? 'غير معروف',
             e.expectedRevenue,
             e.actualRevenue,
           ),
@@ -40,8 +40,7 @@ class ChartDoctor extends StatelessWidget {
               builder: (context) {
                 final totalWidth = chartDoctorData.fold<double>(
                   0,
-                  (sum, item) =>
-                      sum + (item.name.length * 6.5), 
+                  (sum, item) => sum + (item.name.length * 6.5),
                 );
 
                 final chartWidth =

@@ -21,15 +21,15 @@ class CharrStatus extends StatelessWidget {
 
           switch (status) {
             case 'completed':
-              color = const Color(0xFF4CAF50); 
+              color = const Color(0xFF4CAF50);
               labelArabic = 'مكتمل';
               break;
             case 'scheduled':
-              color = const Color(0xFFFFC107); 
+              color = const Color(0xFFFFC107);
               labelArabic = 'مجدول';
               break;
             case 'cancelled':
-              color = const Color(0xFFF44336); 
+              color = const Color(0xFFF44336);
               labelArabic = 'ملغى';
               break;
             default:
@@ -39,17 +39,15 @@ class CharrStatus extends StatelessWidget {
 
           return _StatusRevenueData(
             labelArabic,
-            double.parse(
-              e.expectedRevenue.toString(),
-            ), 
-            double.parse(
-              e.actualRevenue.toString(),
-            ), 
+            double.parse(e.expectedRevenue.toString()),
+            double.parse(e.actualRevenue.toString()),
             color,
           );
         })
         .toList();
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+
       children: [
         Text(
           'الإيرادات حسب الحالة',
@@ -90,12 +88,10 @@ class CharrStatus extends StatelessWidget {
 
             series: <DoughnutSeries<_StatusRevenueData, String>>[
               DoughnutSeries<_StatusRevenueData, String>(
-                dataSource: statusDataMoney, 
-                xValueMapper: (_StatusRevenueData data, _) =>
-                    data.status, 
+                dataSource: statusDataMoney,
+                xValueMapper: (_StatusRevenueData data, _) => data.status,
                 yValueMapper: (_StatusRevenueData data, _) => data.expected,
-                pointColorMapper: (_StatusRevenueData data, _) =>
-                    data.color, 
+                pointColorMapper: (_StatusRevenueData data, _) => data.color,
                 dataLabelSettings: const DataLabelSettings(
                   isVisible: true,
                   labelPosition: ChartDataLabelPosition.outside,

@@ -8,17 +8,14 @@ import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:table_calendar/table_calendar.dart';
-import 'package:clinik_app/core/api/AppEndpoint.dart';
 
 class CalendarControllerX extends GetxController {
   late final AppRepository repo;
   final error = Rxn<ErrorModel>();
   Statusrequest statusrequest = Statusrequest.none;
 
-  /// بيانات الجدول الزمني للطبيب
   final doctorSchedule = Rxn<DoctorScheduleModel>();
 
-  /// المواعيد بعد تحويلها إلى Meetings (لعرضها في التقويم)
   var appointments = <Meeting>[].obs;
 
   var calendarFormat = CalendarFormat.month.obs;
@@ -32,7 +29,6 @@ class CalendarControllerX extends GetxController {
     getDoctorSchedule();
   }
 
-  /// جلب بيانات الجدول الزمني للطبيب
   Future<void> getDoctorSchedule() async {
     statusrequest = Statusrequest.loading;
     update();
@@ -58,7 +54,6 @@ class CalendarControllerX extends GetxController {
     );
   }
 
-  /// تحويل المواعيد إلى Meetings لعرضها في التقويم
   void _mapAppointmentsToMeetings(List<Appointment> list) {
     appointments.clear();
 
@@ -66,7 +61,7 @@ class CalendarControllerX extends GetxController {
       try {
         final appointmentDate = DateTime.parse(
           appt.appointmentDate ?? '',
-        ).toLocal();
+        ).toUtc();
 
         appointments.add(
           Meeting(
@@ -90,7 +85,7 @@ class CalendarControllerX extends GetxController {
   Color _getStatusColor(String? status) {
     switch (status) {
       case 'scheduled':
-        return Appcolor.base; // بنفسجي أساسي
+        return Appcolor.base; 
       case 'completed':
         return Colors.greenAccent;
       case 'cancelled':
@@ -100,7 +95,6 @@ class CalendarControllerX extends GetxController {
     }
   }
 
-  /// فلترة المواعيد حسب اليوم
   List<Meeting> getEventsForDay(DateTime day) {
     final dateKey = DateTime(day.year, day.month, day.day);
     return appointments
@@ -113,7 +107,6 @@ class CalendarControllerX extends GetxController {
         .toList();
   }
 
-  /// تغيير تنسيق التقويم
   void changeFormat(CalendarFormat format) {
     calendarFormat.value = format;
   }
@@ -124,7 +117,6 @@ class CalendarControllerX extends GetxController {
         : CalendarFormat.month;
   }
 
-  /// اختيار يوم معين
   void onDaySelected(DateTime selected, DateTime focused) {
     selectedDay.value = selected;
     focusedDay.value = focused;
@@ -137,7 +129,6 @@ class CalendarControllerX extends GetxController {
   }
 }
 
-/// موديل العرض للتقويم
 class Meeting {
   Meeting({
     required this.id,

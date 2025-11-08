@@ -14,6 +14,7 @@ class InoutdoctorReport extends StatelessWidget {
     return GetBuilder<ReportsController>(
       builder: (controller) {
         return Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
               'تفاصيل الإيرادات حسب الطبيب :',
@@ -24,6 +25,7 @@ class InoutdoctorReport extends StatelessWidget {
             ),
             const SizedBox(height: 15),
             Container(
+              width: double.infinity,
               decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(12),
@@ -74,7 +76,7 @@ class InoutdoctorReport extends StatelessWidget {
                         cells: [
                           DataCell(
                             Text(
-                              e.doctor!.name,
+                              e.doctor?.name ?? 'غير معروف',
                               style: Theme.of(context).textTheme.titleLarge!
                                   .copyWith(
                                     fontSize: 12,

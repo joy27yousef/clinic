@@ -1,6 +1,7 @@
 import 'package:clinik_app/controllers/auth/authController.dart';
 import 'package:clinik_app/core/constant/AppColor.dart';
 import 'package:clinik_app/core/constant/AppImages.dart';
+import 'package:clinik_app/core/constant/AppRoutes.dart';
 import 'package:clinik_app/core/function/confirmationAlert.dart';
 import 'package:clinik_app/core/function/openLink.dart';
 import 'package:flutter/material.dart';
@@ -36,18 +37,32 @@ class OpenDrawer extends StatelessWidget {
             ).textTheme.titleLarge!.copyWith(fontSize: 17),
           ),
           const SizedBox(height: 30),
+
           ListTile(
             title: Text(
-              'تواصل معنا',
+              'تغيير كلمة المرور',
               style: Theme.of(context).textTheme.titleLarge!.copyWith(
                 fontSize: 16,
                 fontWeight: FontWeight.normal,
               ),
             ),
-            leading: const Icon(Iconsax.mobile),
+            onTap: () {
+              Get.toNamed(AppRoutes.changePassPage);
+            },
+            leading: const Icon(Iconsax.password_check),
             trailing: const Icon(Icons.arrow_forward_ios_rounded),
           ),
-
+          // ListTile(
+          //   title: Text(
+          //     'تواصل معنا',
+          //     style: Theme.of(context).textTheme.titleLarge!.copyWith(
+          //       fontSize: 16,
+          //       fontWeight: FontWeight.normal,
+          //     ),
+          //   ),
+          //   leading: const Icon(Iconsax.mobile),
+          //   trailing: const Icon(Icons.arrow_forward_ios_rounded),
+          // ),
           ListTile(
             onTap: () {
               confirmationAelrt(
@@ -72,13 +87,13 @@ class OpenDrawer extends StatelessWidget {
             trailing: const Icon(Icons.arrow_forward_ios_rounded),
           ),
 
-          SizedBox(height: 70),
+          Spacer(),
           InkWell(
             borderRadius: BorderRadius.circular(50),
             onTap: launchCompanyUrl,
-            child: Image.asset(Appimages.team, width: 100),
+            child: Image.asset(Appimages.team, width: 30),
           ),
-          SizedBox(height: 40),
+          SizedBox(height: 20),
 
           Padding(
             padding: const EdgeInsets.only(bottom: 15),

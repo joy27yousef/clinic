@@ -90,76 +90,76 @@ class ChartAppointment extends StatelessWidget {
               ),
               radius: '80%',
               explode: true,
-              explodeIndex: 0, 
+              explodeIndex: 0,
               explodeOffset: '8%',
               explodeGesture: ActivationMode.singleTap,
               animationDuration: 900,
             ),
           ],
         ),
-        SfCircularChart(
-          legend: Legend(
-            isVisible: true,
-            position: LegendPosition.top,
-            overflowMode: LegendItemOverflowMode.scroll,
-            textStyle: Theme.of(context).textTheme.titleLarge!.copyWith(
-              fontSize: 16,
-              fontWeight: FontWeight.normal,
-            ),
-          ),
-          tooltipBehavior: TooltipBehavior(
-            enable: true,
-            header: '',
-            
-            format: 'الحالة: point.x\nالعدد: point.y موعد',
-            textStyle: const TextStyle(
-              color: Colors.white,
-              fontSize: 13,
-              fontWeight: FontWeight.w600,
-              fontFamily: 'Cairo',
-            ),
-            canShowMarker: true,
-            color: Color(0xFF37474F),
-            borderColor: Colors.white,
-            borderWidth: 1.2,
-          ),
-          series: <DoughnutSeries<_AppointmentData, String>>[
-            DoughnutSeries<_AppointmentData, String>(
-              dataSource: paymentData,
-              xValueMapper: (_AppointmentData data, _) => data.type,
-              yValueMapper: (_AppointmentData data, _) => data.count,
-              pointColorMapper: (_AppointmentData data, _) => data.color,
 
-              dataLabelSettings: const DataLabelSettings(
-                isVisible: true,
-                labelPosition: ChartDataLabelPosition.outside,
-                connectorLineSettings: ConnectorLineSettings(
-                  type: ConnectorType.curve,
-                  length: '10%',
-                  color: Colors.grey,
-                  width: 1,
-                ),
-                textStyle: TextStyle(
-                  fontSize: 15,
-                  color: Colors.black87,
-                  fontWeight: FontWeight.bold,
-                  fontFamily: 'Cairo',
-                ),
-                borderRadius: 10,
-                labelIntersectAction: LabelIntersectAction.shift,
-              ),
+        // SfCircularChart(
+        //   legend: Legend(
+        //     isVisible: true,
+        //     position: LegendPosition.top,
+        //     overflowMode: LegendItemOverflowMode.scroll,
+        //     textStyle: Theme.of(context).textTheme.titleLarge!.copyWith(
+        //       fontSize: 16,
+        //       fontWeight: FontWeight.normal,
+        //     ),
+        //   ),
+        //   tooltipBehavior: TooltipBehavior(
+        //     enable: true,
+        //     header: '',
 
-              innerRadius: '55%',
-              radius: '80%',
-              explode: true,
-              explodeIndex: 0, 
-              explodeOffset: '8%',
-              explodeGesture: ActivationMode.singleTap, 
-              animationDuration: 900,
-            ),
-          ],
-        ),
+        //     format: 'الحالة: point.x\nالعدد: point.y موعد',
+        //     textStyle: const TextStyle(
+        //       color: Colors.white,
+        //       fontSize: 13,
+        //       fontWeight: FontWeight.w600,
+        //       fontFamily: 'Cairo',
+        //     ),
+        //     canShowMarker: true,
+        //     color: Color(0xFF37474F),
+        //     borderColor: Colors.white,
+        //     borderWidth: 1.2,
+        //   ),
+        //   series: <DoughnutSeries<_AppointmentData, String>>[
+        //     DoughnutSeries<_AppointmentData, String>(
+        //       dataSource: paymentData,
+        //       xValueMapper: (_AppointmentData data, _) => data.type,
+        //       yValueMapper: (_AppointmentData data, _) => data.count,
+        //       pointColorMapper: (_AppointmentData data, _) => data.color,
 
+        //       dataLabelSettings: const DataLabelSettings(
+        //         isVisible: true,
+        //         labelPosition: ChartDataLabelPosition.outside,
+        //         connectorLineSettings: ConnectorLineSettings(
+        //           type: ConnectorType.curve,
+        //           length: '10%',
+        //           color: Colors.grey,
+        //           width: 1,
+        //         ),
+        //         textStyle: TextStyle(
+        //           fontSize: 15,
+        //           color: Colors.black87,
+        //           fontWeight: FontWeight.bold,
+        //           fontFamily: 'Cairo',
+        //         ),
+        //         borderRadius: 10,
+        //         labelIntersectAction: LabelIntersectAction.shift,
+        //       ),
+
+        //       innerRadius: '55%',
+        //       radius: '80%',
+        //       explode: true,
+        //       explodeIndex: 0,
+        //       explodeOffset: '8%',
+        //       explodeGesture: ActivationMode.singleTap,
+        //       animationDuration: 900,
+        //     ),
+        //   ],
+        // ),
         const SizedBox(height: 40),
       ],
     );

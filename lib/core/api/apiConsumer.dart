@@ -8,7 +8,8 @@ abstract class ApiConsumer {
     String path, {
     Object? data,
     Map<String, dynamic>? queryParameters,
-    bool isFromData = false, required bool withToken,
+    bool isFromData = false,
+    required bool withToken,
   });
   Future<dynamic> patch(
     String path, {
@@ -19,6 +20,6 @@ abstract class ApiConsumer {
     String path, {
     Object? data,
     Map<String, dynamic>? queryParameters,
-    bool isFromData = false,   
+    bool isFromData = false,
   });
 }

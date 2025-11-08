@@ -4,7 +4,8 @@ class AppEndpoint {
 
   //auth
   static const String login = '/login';
-  static const String logout = '/logoutFromAllTokens';
+  static const String logout = '/logoutFromCurrentToken';
+  static const String changePassword = '/changePassword';
 
   //doctor
   static const String appointments = '/appointments';
@@ -38,7 +39,8 @@ class ApiKey {
 
   // 🔹 Auth
   static String identifier = 'identifier';
-  static String password = 'password';
+  static String password = 'password'; 
+  static String conpassword = 'password_confirmation'; 
   static String token = 'token';
   static String user = 'user';
 
