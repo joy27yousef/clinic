@@ -15,7 +15,7 @@ class WelcomeText extends StatelessWidget {
         ),
         SizedBox(height: 5),
         Text(
-          'الرجاء ادخال البريد الالكتروني وكلمة السرّ لتسجيل الدخول',
+          'الرجاء ادخال اسم المستخدم وكلمة السرّ لتسجيل الدخول',
           style: Theme.of(context).textTheme.titleMedium,
         ),
         SizedBox(height: 40),

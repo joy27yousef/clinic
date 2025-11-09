@@ -1,4 +1,3 @@
-
 import 'package:clinik_app/core/api/AppEndpoint.dart';
 import 'package:clinik_app/core/api/dioConsumer.dart';
 import 'package:clinik_app/core/cache/cacheHelper.dart';
@@ -68,6 +67,8 @@ class AuthController extends GetxController {
             CacheHelper().saveData(key: GeneralKey.userRole, value: roleName);
             CacheHelper().removeData(key: GeneralKey.userName);
             CacheHelper().saveData(key: GeneralKey.userName, value: user!.name);
+            email.clear();
+            password.clear();
             if (roleName == 'admin') {
               Get.offNamed(AppRoutes.adminBasePage);
             } else if (roleName == 'doctor') {

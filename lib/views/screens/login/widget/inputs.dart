@@ -20,7 +20,7 @@ class Inputs extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            'البريد الالكتروني أو اسم المستخدم',
+            ' اسم المستخدم',
             style: Theme.of(context).textTheme.titleMedium!.copyWith(
               color: Colors.black,
               fontSize: 15,

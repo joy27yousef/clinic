@@ -91,9 +91,9 @@ class OpenDrawer extends StatelessWidget {
           InkWell(
             borderRadius: BorderRadius.circular(50),
             onTap: launchCompanyUrl,
-            child: Image.asset(Appimages.team, width: 30),
+            child: Image.asset(Appimages.team, width: 50),
           ),
-          SizedBox(height: 20),
+          SizedBox(height: 10),
 
           Padding(
             padding: const EdgeInsets.only(bottom: 15),
@@ -102,10 +102,10 @@ class OpenDrawer extends StatelessWidget {
 
               borderRadius: BorderRadius.circular(8),
               child: Text(
-                'تطوير شركة اونوكود التقنية - الامارات العربية المتحدة',
+                'تطوير شركة فوني تيك التقنية - سورية',
                 style: Theme.of(context).textTheme.titleLarge!.copyWith(
-                  fontSize: 13,
-                  color: Appcolor.bas2,
+                  fontSize: 16,
+                  color: const Color.fromARGB(255, 13, 87, 107),
                   fontWeight: FontWeight.normal,
                 ),
               ),

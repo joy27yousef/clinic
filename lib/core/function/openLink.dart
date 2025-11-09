@@ -1,7 +1,7 @@
 import 'package:url_launcher/url_launcher.dart';
 
 Future<void> launchCompanyUrl() async {
-  final Uri url = Uri.parse('https://www.unocodetech.com/ar');
+  final Uri url = Uri.parse('https://phoenitech.sy/ar');
   if (await canLaunchUrl(url)) {
     await launchUrl(url, mode: LaunchMode.externalApplication);
   } else {

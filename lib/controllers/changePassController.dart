@@ -51,6 +51,8 @@ class ChangePassController extends GetxController {
         (data) async {
           if (data.status == true) {
             if (Get.isDialogOpen ?? false) Get.back();
+            password.clear();
+            confirmPassword.clear();
             Get.back();
             showCustomSnackbar(
               title: "نجاح",
