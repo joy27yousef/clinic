@@ -5,6 +5,8 @@ import 'package:clinik_app/core/constant/AppRoutes.dart';
 import 'package:clinik_app/core/function/confirmationAlert.dart';
 import 'package:clinik_app/core/function/openLink.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 
@@ -67,7 +69,7 @@ class OpenDrawer extends StatelessWidget {
             onTap: () {
               confirmationAelrt(
                 Appimages.logout,
-                'هل أنت واثق من أنك تريد تسجيل الخروج من التطبيق ؟؟',
+                'هل تريد بالتأكيد تسجيل الخروج ؟',
                 'كلا، البقاء',
                 'نعم، سجّل الخروج',
                 Appcolor.base,
@@ -88,29 +90,87 @@ class OpenDrawer extends StatelessWidget {
           ),
 
           Spacer(),
-          InkWell(
-            borderRadius: BorderRadius.circular(50),
-            onTap: launchCompanyUrl,
-            child: Image.asset(Appimages.team, width: 50),
-          ),
-          SizedBox(height: 10),
-
           Padding(
-            padding: const EdgeInsets.only(bottom: 15),
+            padding: const EdgeInsets.symmetric(horizontal: 10),
             child: InkWell(
-              onTap: launchCompanyUrl,
-
-              borderRadius: BorderRadius.circular(8),
-              child: Text(
-                'تطوير شركة فوني تيك التقنية - سورية',
-                style: Theme.of(context).textTheme.titleLarge!.copyWith(
-                  fontSize: 16,
-                  color: const Color.fromARGB(255, 13, 87, 107),
-                  fontWeight: FontWeight.normal,
-                ),
+              borderRadius: BorderRadius.circular(50),
+              onTap: () => launchCompanyUrl('https://phoenitech.sy/ar'),
+              child: Row(
+                children: [
+                  Image.asset(Appimages.team, width: 30),
+                  SizedBox(width: 5),
+                  Padding(
+                    padding: const EdgeInsets.only(bottom: 15),
+                    child: Text(
+                      'تطوير شركة فوني تيك التقنية - سورية',
+                      style: Theme.of(context).textTheme.titleLarge!.copyWith(
+                        fontSize: 16,
+                        color: Appcolor.base,
+                        fontWeight: FontWeight.normal,
+                      ),
+                    ),
+                  ),
+                ],
               ),
             ),
           ),
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: 1),
+            child: SizedBox(
+              width: 120,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  InkWell(
+                    borderRadius: BorderRadius.circular(50),
+                    onTap: () => launchCompanyUrl('https://wa.me/963935614823'),
+                    child: SvgPicture.asset(
+                      Appimages.whatsapp,
+                      height: 20,
+                      width: 20,
+                      color: Appcolor.bas2,
+                    ),
+                  ),
+                  InkWell(
+                    borderRadius: BorderRadius.circular(50),
+                    onTap: () => launchCompanyUrl(
+                      'https://www.instagram.com/phoeni.tech',
+                    ),
+                    child: SvgPicture.asset(
+                      Appimages.instagram,
+                      height: 20,
+                      width: 20,
+                      color: Appcolor.bas2,
+                    ),
+                  ),
+                  InkWell(
+                    borderRadius: BorderRadius.circular(50),
+                    onTap: () => launchCompanyUrl('https://x.com/phoeni_tech'),
+                    child: SvgPicture.asset(
+                      Appimages.x,
+                      height: 20,
+                      width: 20,
+                      color: Appcolor.bas2,
+                    ),
+                  ),
+
+                  InkWell(
+                    borderRadius: BorderRadius.circular(50),
+                    onTap: () => launchCompanyUrl(
+                      'https://www.facebook.com/PhoeniTech.sy',
+                    ),
+                    child: SvgPicture.asset(
+                      Appimages.facebook,
+                      height: 20,
+                      width: 20,
+                      color: Appcolor.bas2,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+          SizedBox(height: 20),
         ],
       ),
     );

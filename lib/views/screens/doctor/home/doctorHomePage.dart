@@ -29,7 +29,7 @@ class DoctorHomePage extends StatelessWidget {
           child: Icon(Icons.menu_rounded),
         ),
         title: Text(
-          '${getGreeting()}  ${CacheHelper().getData(key: GeneralKey.userName) ?? ''}',
+          '${CacheHelper().getData(key: GeneralKey.userName) ?? ''}',
           style: Theme.of(context).textTheme.titleLarge!.copyWith(
             fontWeight: FontWeight.normal,
             fontSize: 17,

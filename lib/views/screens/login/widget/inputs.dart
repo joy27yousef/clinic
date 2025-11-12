@@ -66,7 +66,7 @@ class Inputs extends StatelessWidget {
             ),
           ),
 
-          SizedBox(height: 80),
+          SizedBox(height: 40),
         ],
       ),
     );

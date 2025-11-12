@@ -35,7 +35,10 @@ class Handilingdataview extends StatelessWidget {
 
     switch (currentStatus) {
       case Statusrequest.loading:
-        return Center(child: Lottie.asset(Appimages.loading));
+        return Padding(
+          padding: const EdgeInsets.all(80),
+          child: Center(child: Lottie.asset(Appimages.loading)),
+        );
 
       case Statusrequest.offlinefailure:
         return Center(
@@ -50,7 +53,16 @@ class Handilingdataview extends StatelessWidget {
         );
 
       case Statusrequest.serverfailure:
-        return const Center(child: Text('Server failure ❌'));
+        return Center(
+          child: Text(
+            'حدث خطأ، الرجاء المحاولة لاحقاً',
+            style: Theme.of(context).textTheme.titleLarge!.copyWith(
+              color: Colors.grey.shade500,
+              fontSize: 15,
+              fontWeight: FontWeight.normal,
+            ),
+          ),
+        );
 
       case Statusrequest.serverException:
         return const Center(child: Text('Unexpected error ⚠️'));

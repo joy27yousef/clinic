@@ -25,24 +25,36 @@ class StatisticsPage extends StatelessWidget {
         ),
         centerTitle: true,
       ),
-      body: Obx(() {
-        if (controller.statusrequest == Statusrequest.loading) {
-          return Center(
-            child: Lottie.asset(Appimages.loading, width: 150, height: 150),
-          );
-        }
+      body: GetBuilder<ReportsController>(
+        builder: (controller) {
+          if (controller.statusrequest == Statusrequest.loading) {
+            return Center(
+              child: Lottie.asset(Appimages.loading, width: 150, height: 150),
+            );
+          }
 
-        if (controller.statusrequest == Statusrequest.serverfailure ||
-            controller.reportAppointmentData.value == null) {
-          return const Center(child: Text("حدث خطأ في تحميل البيانات"));
-        }
-        return Padding(
-          padding: const EdgeInsets.all(16.0),
-          child: ListView(
-            children: [ChartAppointment(), ChartDoctor(), CharrStatus()],
-          ),
-        );
-      }),
+          if (controller.statusrequest == Statusrequest.serverfailure ||
+              controller.reportAppointmentData.value == null) {
+            return Center(
+              child: Text(
+                'حدث خطأ، الرجاء المحاولة لاحقاً',
+                style: Theme.of(context).textTheme.titleLarge!.copyWith(
+                  color: Colors.grey.shade500,
+                  fontSize: 15,
+                  fontWeight: FontWeight.normal,
+                ),
+              ),
+            );
+          }
+
+          return Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: ListView(
+              children: [ChartAppointment(), ChartDoctor(), CharrStatus()],
+            ),
+          );
+        },
+      ),
     );
   }
 }

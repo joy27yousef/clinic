@@ -63,20 +63,20 @@ class AppointmentStatisticsCard extends StatelessWidget {
                     child: Center(
                       child: Text(
                         '${statusData[i]}',
-                        style: Theme.of(context)
-                            .textTheme
-                            .titleLarge!
-                            .copyWith(color: Colors.white, fontSize: 15),
+                        style: Theme.of(context).textTheme.titleLarge!.copyWith(
+                          color: Colors.white,
+                          fontSize: 15,
+                        ),
                       ),
                     ),
                   ),
                   Text(
                     controller.titles[i],
                     style: Theme.of(context).textTheme.titleLarge!.copyWith(
-                          fontSize: 17,
-                          fontWeight: FontWeight.normal,
-                          color: Appcolor.bas2,
-                        ),
+                      color: Appcolor.secondary,
+                      fontWeight: FontWeight.normal,
+                      fontSize: 16,
+                    ),
                     textAlign: TextAlign.center,
                   ),
                 ],
@@ -86,10 +86,9 @@ class AppointmentStatisticsCard extends StatelessWidget {
           const SizedBox(height: 30),
           Text(
             'نسبة إتمام المعاينات',
-            style: Theme.of(context)
-                .textTheme
-                .titleLarge!
-                .copyWith(fontWeight: FontWeight.normal),
+            style: Theme.of(
+              context,
+            ).textTheme.titleLarge!.copyWith(fontWeight: FontWeight.normal),
           ),
           const SizedBox(height: 20),
           // Progress bar

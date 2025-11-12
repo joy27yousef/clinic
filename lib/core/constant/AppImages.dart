@@ -7,4 +7,10 @@ class Appimages {
   static String personal = 'assets/images/personalInfo.png';
   static String logout = 'assets/images/logout.png';
   static String team = 'assets/images/team.png';
+  //
+  static String facebook = 'assets/images/facebook.svg';
+  static String instagram = 'assets/images/instagram.svg';
+  static String whatsapp = 'assets/images/whatsapp.svg';
+  static String x = 'assets/images/x.svg';
+  //
 }

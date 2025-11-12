@@ -45,9 +45,9 @@ class StatisticsPatientCard extends StatelessWidget {
                   Text(
                     controller.title[i],
                     style: Theme.of(context).textTheme.titleLarge!.copyWith(
+                      color: Appcolor.secondary,
                       fontWeight: FontWeight.normal,
-                      color: Appcolor.bas2,
-                      fontSize: 17,
+                      fontSize: 16,
                     ),
                   ),
                   Container(

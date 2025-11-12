@@ -18,7 +18,7 @@ class WelcomeText extends StatelessWidget {
           'الرجاء ادخال اسم المستخدم وكلمة السرّ لتسجيل الدخول',
           style: Theme.of(context).textTheme.titleMedium,
         ),
-        SizedBox(height: 40),
+        SizedBox(height: 25),
       ],
     );
   }

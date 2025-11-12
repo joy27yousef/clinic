@@ -33,7 +33,7 @@ class AdminHomepage extends StatelessWidget {
           child: const Icon(Icons.menu_rounded),
         ),
         title: Text(
-          '${getGreeting()}  ${CacheHelper().getData(key: GeneralKey.userName)}',
+          ' ${CacheHelper().getData(key: GeneralKey.userName)}',
           style: Theme.of(context).textTheme.titleLarge!.copyWith(
             fontWeight: FontWeight.normal,
             fontSize: 17,
@@ -55,8 +55,9 @@ class AdminHomepage extends StatelessWidget {
           child: ListView(
             children: [
               WelcomePart(
-                containerColor: Appcolor.bas2,
-                textColor: Colors.white,
+                containerColor: Colors.grey.shade200,
+
+                textColor: Appcolor.secondary,
               ),
               SystemView(),
             ],

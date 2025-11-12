@@ -1,51 +1,30 @@
 import 'package:clinik_app/controllers/admin/adminBaseController.dart';
 import 'package:clinik_app/core/constant/AppColor.dart';
 import 'package:clinik_app/views/widgets/openDrawer.dart';
-
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
-
 import 'package:iconsax/iconsax.dart';
-import 'package:persistent_bottom_nav_bar/persistent_bottom_nav_bar.dart';
 
-class AdminBasePage extends StatelessWidget {
-  AdminBasePage({super.key});
+class AdminBasePage extends StatefulWidget {
+  const AdminBasePage({super.key});
 
+  @override
+  State<AdminBasePage> createState() => _AdminBasePageState();
+}
+
+class _AdminBasePageState extends State<AdminBasePage>
+    with SingleTickerProviderStateMixin {
   final AdminBaseController controller = Get.find();
-  final PersistentTabController persistentController = PersistentTabController(
-    initialIndex: 0,
-  );
+  int currentIndex = 0;
+
+  final List<Map<String, dynamic>> items = [
+    {"icon": Iconsax.home_2, "title": "الرئيسية"},
+    {"icon": Iconsax.status_up, "title": "الإحصائيات"},
+  ];
 
   @override
   Widget build(BuildContext context) {
-    List<PersistentBottomNavBarItem> navBarsItems() {
-      return [
-        PersistentBottomNavBarItem(
-          contentPadding: 2,
-
-          icon: const Icon(Iconsax.home_2),
-          title: "  الرئيسية",
-          textStyle: Theme.of(
-            context,
-          ).textTheme.titleLarge!.copyWith(fontSize: 15),
-          activeColorPrimary: Appcolor.bas2,
-          inactiveColorPrimary: Colors.grey,
-        ),
-        PersistentBottomNavBarItem(
-          contentPadding: 2,
-
-          icon: const Icon(Iconsax.status_up),
-          title: " الإحصائيات",
-          textStyle: Theme.of(
-            context,
-          ).textTheme.titleLarge!.copyWith(fontSize: 15),
-          activeColorPrimary: Appcolor.bas2,
-          inactiveColorPrimary: Colors.grey,
-        ),
-      ];
-    }
-
     return Scaffold(
       key: controller.scaffoldKey,
       drawer: Drawer(
@@ -57,22 +36,80 @@ class AdminBasePage extends StatelessWidget {
           SystemNavigator.pop();
           return false;
         },
-        child: PersistentTabView(
-          context,
-          controller: persistentController,
-          screens: controller.buildScreens(context),
-          items: navBarsItems(),
-          confineToSafeArea: true,
-          margin: EdgeInsets.all(10),
-          backgroundColor: Appcolor.backgroundLight,
-          handleAndroidBackButtonPress: true,
-          resizeToAvoidBottomInset: true,
-          stateManagement: true,
-          navBarStyle: NavBarStyle.style1,
-          onItemSelected: (index) {
-            controller.changePage(index);
-            persistentController.jumpToTab(index);
-          },
+        child: Stack(
+          children: [
+            controller.buildScreens(context)[currentIndex],
+
+            Align(
+              alignment: Alignment.bottomCenter,
+              child: Container(
+                margin: const EdgeInsets.all(12),
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 10,
+                  vertical: 5,
+                ),
+                decoration: BoxDecoration(color: Appcolor.backgroundLight),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: List.generate(items.length, (index) {
+                    final item = items[index];
+                    final bool isActive = currentIndex == index;
+
+                    return GestureDetector(
+                      onTap: () {
+                        setState(() {
+                          currentIndex = index;
+                        });
+                        controller.changePage(index);
+                      },
+                      child: AnimatedContainer(
+                        duration: const Duration(milliseconds: 300),
+                        padding: const EdgeInsets.symmetric(
+                          horizontal: 12,
+                          vertical: 8,
+                        ),
+                        decoration: BoxDecoration(
+                          color: isActive
+                              ? Appcolor.bas2.withOpacity(0.15)
+                              : Colors.transparent,
+                          borderRadius: BorderRadius.circular(20),
+                        ),
+                        child: Row(
+                          children: [
+                            Icon(
+                              item["icon"],
+                              color: isActive
+                                  ? Appcolor.bas2
+                                  : Colors.grey[500],
+                              size: 24,
+                            ),
+                            const SizedBox(width: 6),
+                            Text(
+                              item["title"],
+                              style: isActive
+                                  ? Theme.of(
+                                      context,
+                                    ).textTheme.titleLarge!.copyWith(
+                                      color: Appcolor.base,
+                                      fontSize: 17,
+                                    )
+                                  : Theme.of(
+                                      context,
+                                    ).textTheme.titleLarge!.copyWith(
+                                      fontSize: 17,
+                                      fontWeight: FontWeight.w500,
+                                      color: Colors.grey[500],
+                                    ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    );
+                  }),
+                ),
+              ),
+            ),
+          ],
         ),
       ),
     );

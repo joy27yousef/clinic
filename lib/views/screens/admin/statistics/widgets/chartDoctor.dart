@@ -11,16 +11,85 @@ class ChartDoctor extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final doctorData = controller.reportAppointmentData.value!.data?.byDoctor;
-    final chartDoctorData = doctorData!
+    final doctorData = controller.reportAppointmentData.value?.data?.byDoctor;
+
+    //  التحقق من وجود بيانات
+    if (doctorData == null) {
+      return Center(
+        child: Padding(
+          padding: EdgeInsets.symmetric(vertical: 40),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                'إحصائيات الأطباء :',
+                style: Theme.of(context).textTheme.titleLarge!.copyWith(
+                  fontSize: 17,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              SizedBox(height: 20),
+              Center(
+                child: Text(
+                  'لا يوجد  إحصائيات لعرضها ',
+                  style: Theme.of(context).textTheme.titleLarge!.copyWith(
+                    fontSize: 15,
+                    fontWeight: FontWeight.normal,
+                    color: Colors.grey.shade500,
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+      );
+    }
+
+    final chartDoctorData = doctorData
         .map(
           (e) => _DoctorRevenueData(
             e.doctor?.name ?? 'غير معروف',
-            e.expectedRevenue,
-            e.actualRevenue,
+            e.expectedRevenue ?? 0.0,
+            e.actualRevenue ?? 0.0,
           ),
         )
         .toList();
+
+    // 🔍 التحقق من أن كل القيم = صفر
+    final allZero = chartDoctorData.every(
+      (item) => item.expected == 0 && item.actual == 0,
+    );
+
+    if (allZero) {
+      return Padding(
+        padding: EdgeInsets.symmetric(vertical: 40),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              'إحصائيات الأطباء :',
+              style: Theme.of(context).textTheme.titleLarge!.copyWith(
+                fontSize: 17,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            SizedBox(height: 20),
+            Center(
+              child: Text(
+                'لا توجد إيرادات لعرضها  ',
+                style: Theme.of(context).textTheme.titleLarge!.copyWith(
+                  fontSize: 15,
+                  fontWeight: FontWeight.normal,
+                  color: Colors.grey.shade500,
+                ),
+              ),
+            ),
+          ],
+        ),
+      );
+    }
+
+    // ✅ في حال وجود بيانات فعلية
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -64,7 +133,7 @@ class ChartDoctor extends StatelessWidget {
                     tooltipBehavior: TooltipBehavior(
                       enable: true,
                       header: '',
-                      color: Color(0xFF263238),
+                      color: const Color(0xFF263238),
                       borderWidth: 1.2,
                       borderColor: Colors.white,
                       textStyle: const TextStyle(
@@ -73,7 +142,7 @@ class ChartDoctor extends StatelessWidget {
                         fontWeight: FontWeight.bold,
                         fontFamily: 'Cairo',
                       ),
-                      format: 'point.x \n\n القيمة بالليرة السورية :point.y',
+                      format: 'الطبيب: point.x \nالقيمة بالليرة: point.y',
                     ),
                     primaryXAxis: CategoryAxis(
                       labelStyle: const TextStyle(
@@ -81,10 +150,8 @@ class ChartDoctor extends StatelessWidget {
                         color: Colors.black87,
                         fontFamily: 'Cairo',
                       ),
-
                       majorGridLines: const MajorGridLines(width: 0),
                     ),
-
                     series: <CartesianSeries<_DoctorRevenueData, String>>[
                       ColumnSeries<_DoctorRevenueData, String>(
                         name: 'الإيراد المتوقع',
@@ -114,7 +181,7 @@ class ChartDoctor extends StatelessWidget {
                         xValueMapper: (_DoctorRevenueData data, _) => data.name,
                         yValueMapper: (_DoctorRevenueData data, _) =>
                             data.actual,
-                        color: const Color(0xFFFFC107),
+                        color: Appcolor.base,
                         borderRadius: const BorderRadius.vertical(
                           top: Radius.circular(12),
                         ),

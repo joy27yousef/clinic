@@ -1,4 +1,5 @@
 import 'package:clinik_app/controllers/admin/reportsController.dart';
+import 'package:clinik_app/core/constant/AppColor.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
@@ -9,45 +10,79 @@ class CharrStatus extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final statusDataMoney = controller
-        .reportAppointmentData
-        .value!
-        .data!
-        .byStatus
-        .map((e) {
-          final status = e.status.trim().toLowerCase();
-          late Color color;
-          late String labelArabic;
+    final byStatus = controller.reportAppointmentData.value?.data?.byStatus;
 
-          switch (status) {
-            case 'completed':
-              color = const Color(0xFF4CAF50);
-              labelArabic = 'مكتمل';
-              break;
-            case 'scheduled':
-              color = const Color(0xFFFFC107);
-              labelArabic = 'مجدول';
-              break;
-            case 'cancelled':
-              color = const Color(0xFFF44336);
-              labelArabic = 'ملغى';
-              break;
-            default:
-              color = const Color(0xFF9E9E9E);
-              labelArabic = status;
-          }
+    // 🧩 تحقق من وجود بيانات
+    if (byStatus == null || byStatus.isEmpty) {
+      return Center(
+        child: Padding(
+          padding: EdgeInsets.symmetric(vertical: 40),
+          child: Text(
+            '',
+            style: TextStyle(
+              fontSize: 16,
+              fontFamily: 'Cairo',
+              color: Colors.black54,
+            ),
+          ),
+        ),
+      );
+    }
 
-          return _StatusRevenueData(
-            labelArabic,
-            double.parse(e.expectedRevenue.toString()),
-            double.parse(e.actualRevenue.toString()),
-            color,
-          );
-        })
-        .toList();
+    final statusDataMoney = byStatus.map((e) {
+      final status = e.status.trim().toLowerCase();
+      late Color color;
+      late String labelArabic;
+
+      switch (status) {
+        case 'completed':
+          color = Appcolor.base;
+          labelArabic = 'مكتمل';
+          break;
+        case 'scheduled':
+          color = Appcolor.secondary;
+          labelArabic = 'مجدول';
+          break;
+        case 'cancelled':
+          color = const Color(0xFFF44336);
+          labelArabic = 'ملغى';
+          break;
+        default:
+          color = const Color(0xFF9E9E9E);
+          labelArabic = status;
+      }
+
+      return _StatusRevenueData(
+        labelArabic,
+        double.tryParse(e.expectedRevenue.toString()) ?? 0.0,
+        double.tryParse(e.actualRevenue.toString()) ?? 0.0,
+        color,
+      );
+    }).toList();
+
+    // 🔍 تحقق إن كانت كل القيم صفر
+    final allZero = statusDataMoney.every(
+      (data) => data.expected == 0 && data.actual == 0,
+    );
+
+    if (allZero) {
+      return const Center(
+        child: Padding(
+          padding: EdgeInsets.symmetric(vertical: 40),
+          child: Text(
+            'لا توجد إيرادات لعرضها بعد 💸',
+            style: TextStyle(
+              fontSize: 16,
+              fontFamily: 'Cairo',
+              color: Colors.black54,
+            ),
+          ),
+        ),
+      );
+    }
+
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
-
       children: [
         Text(
           'الإيرادات حسب الحالة',
@@ -66,7 +101,6 @@ class CharrStatus extends StatelessWidget {
               overflowMode: LegendItemOverflowMode.scroll,
               textStyle: const TextStyle(
                 fontSize: 15,
-
                 color: Colors.black87,
                 fontFamily: 'Cairo',
               ),
@@ -85,7 +119,6 @@ class CharrStatus extends StatelessWidget {
               ),
               format: 'الحالة: point.x\nالقيمة: point.y',
             ),
-
             series: <DoughnutSeries<_StatusRevenueData, String>>[
               DoughnutSeries<_StatusRevenueData, String>(
                 dataSource: statusDataMoney,
@@ -116,7 +149,6 @@ class CharrStatus extends StatelessWidget {
             ],
           ),
         ),
-
         const SizedBox(height: 40),
       ],
     );

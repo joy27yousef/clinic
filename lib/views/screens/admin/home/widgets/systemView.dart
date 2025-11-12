@@ -71,7 +71,7 @@ class SystemView extends StatelessWidget {
                     Text(
                       title[i],
                       style: Theme.of(context).textTheme.titleLarge!.copyWith(
-                        color: Appcolor.bas2,
+                        color: Appcolor.secondary,
                         fontSize: 16,
                       ),
                     ),
